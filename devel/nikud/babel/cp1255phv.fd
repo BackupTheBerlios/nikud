@@ -5,7 +5,7 @@
         [2003/04/20 v1.0
          Hebrew cp1255 font
          (test version: still liable to change)]
-\def\PhvCulmusScale{0.92}
+\def\PhvCulmusScale{1.00}
 \DeclareFontFamily{cp1255}{phv}{\hyphenchar\font45}
 \DeclareFontShape{cp1255}{phv}{m}{n}
       {<-> [\PhvCulmusScale] nachlieli }{}

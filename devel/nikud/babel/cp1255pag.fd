@@ -5,7 +5,7 @@
         [2003/04/20 v1.0
          Hebrew cp1255 font
          (test version: still liable to change)]
-\def\PagCulmusScale{1.00}
+\def\PagCulmusScale{1.09}
 \DeclareFontFamily{cp1255}{pag}{\hyphenchar\font45}
 \DeclareFontShape{cp1255}{pag}{m}{n}
       {<-> [\PagCulmusScale] nachlieli }{}

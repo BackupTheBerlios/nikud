@@ -5,7 +5,7 @@
         [2003/04/20 v1.0
          Hebrew cp1255 font
          (test version: still liable to change)]
-\def\PplCulmusScale{0.92}
+\def\PplCulmusScale{1.10}
 \DeclareFontFamily{cp1255}{ppl}{\hyphenchar\font45}
 \DeclareFontShape{cp1255}{ppl}{m}{n}
       {<-> [\PplCulmusScale] frank }{}
