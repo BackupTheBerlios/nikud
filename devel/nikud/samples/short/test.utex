@@ -25,6 +25,16 @@
 
 "מרכאות" ''כפולות''  על ידי )\texttt{''}( או על ידי )\texttt{"}(
 
+\font\ellinia=elliniaClmNkd at 11pt
+
+אפשר להשתמש בפונטים אחרים, {\ellinia דוגמת ''אליניה'', כמו ב\L{-}\TeX.}
+
+\font\yehuda=yehudaClmNkd at 11pt
+
+{\yehuda או בפונט ''יהודה''.}
+
+אבל לא ניתן לנקד את הפונטים {\yehuda ''יהודה''} ו{\ellinia ''אליניה''}.
+
 \unsethebrew
 This is an English sentence.
 
