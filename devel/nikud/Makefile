@@ -1,4 +1,5 @@
 TEXMFDIR = $(HOME)/texmf
+#TEXMFDIR = /usr/share/texmf
 TEXFONTSDIR = $(TEXMFDIR)/fonts
 DVIPSBASEDIR = $(TEXMFDIR)/dvips/base
 TMP_FILE = temp.map
@@ -10,7 +11,7 @@ AFM_TEMP_FILE = temp.afm
 CULMUS_DIR = culmus-0.90
 TEST_DIR = tests
 
-RM = rm -f
+RM = rm -fr
 CP = cp -f
 MKDIR = mkdir -p
 
@@ -24,6 +25,25 @@ clean:
 	$(RM) *.vf *.tfm *.vpl *.map *~ 
 	$(RM) $(TMP_FILE) $(AFM_TEMP_FILE) *.t3 *.ps 
 	$(RM) $(TEST_DIR)/*.ps babel/*~
+	make -C samples/long clean
+	make -C samples/short clean
+	make -C samples/song clean
+
+uninstall:
+	$(RM) "$(TEXFONTSDIR)/tfm/hebrew/"
+	$(RM) "$(TEXFONTSDIR)/vf/hebrew/"
+	$(RM) "$(DVIPSBASEDIR)/$(CULMUS_ENC_FILE)"
+	$(RM) "$(DVIPSBASEDIR)/$(CULMUS_DVIPS_MAP_FILE)"
+	$(RM) "$(TEXFONTSDIR)/afm/hebrew/"
+	$(RM) "$(TEXFONTSDIR)/type1/hebrew/"
+	$(RM) $(LOCAL_BABEL_DIR)
+	$(RM) "$(TEXMFDIR)/bibtex/bst/chicagoi.bst"
+	$(RM) "$(TEXMFDIR)/bibtex/bst/chicagoiheb.bst"
+	$(RM) "$(TEXMFDIR)/tex/biblio"
+	$(RM) "$(TEXMFDIR)/tex/latex/tools/variorefh.sty"
+	$(RM) "$(TEXMFDIR)/doc/latex/nikud"
+	mktexlsr
+
 
 install:
 	$(MKDIR) "$(TEXFONTSDIR)/tfm/hebrew/"

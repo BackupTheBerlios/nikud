@@ -8,8 +8,9 @@
 <body>
 <h1>Nikud - Hebrew Culmus fonts in LaTeX with vowel-point placing</h1>
 First of all, an example of the output:<br>
-<img src="hebsample.jpg" title="" alt="Hebrew sample"
- style="width: 351px; height: 306px;"><br>
+<div style="text-align: center;"><img src="hebsample.jpg" title=""
+ alt="Hebrew sample" style="width: 351px; height: 306px;"><br>
+</div>
 <br>
 This project will provide all the files needed to use <a
  href="culmus.sf.net">Culmus</a> fonts in Latex (elatex) with Nikud.<br>
@@ -19,7 +20,8 @@ publish by Sivan Toledo for <a
  href="http://www.cs.tau.ac.il/%7Estoledo/Pubs/vowels.ps">Vowel-point
 placing</a>.<br>
 <br>
-The package contains the needed Culmus fonts.<br>
+The package currently uses Culmus fonts from version 0.90, and includes
+all the needed fonts.<br>
 <br>
 Also included, is a modified version of <span
  style="font-family: monospace;">varioref.sty</span> package -- <span
@@ -44,7 +46,7 @@ don't have to do anything, but in 9.0 you have to make the change).<br>
 There are three option for downloading and installing the package:<br>
 <h3>The texmf tree</h3>
 <ol>
-  <li>Untar <span style="font-family: monospace;">nikud_texmf_x.y.z.tar.bz2</span>
+  <li>Untar <span style="font-family: monospace;">nikud_texmf-x.y.z.tar.bz2</span>
 into your main or local texmf tree</li>
   <li>Become root (su).<br>
   </li>
@@ -64,7 +66,7 @@ To compile the fonts, the following packages must be installed: <span
  style="font-family: monospace;">tetex, afm, tetex-latex, dvips, iconv,
 perl</span>.<br>
 <ol>
-  <li>Untar <span style="font-family: monospace;">nikud_source_x.y.z.tar.bz2</span>.</li>
+  <li>Untar <span style="font-family: monospace;">nikud_source-x.y.z.tar.bz2</span>.</li>
   <li>Edit <span style="font-family: monospace;">Makefile </span>and
 set the variables as you like (you really don't have to change anything
 if you work locally).</li>
@@ -98,15 +100,17 @@ and convert it to cp1255 with <span style="font-family: monospace;">iconv</span>
 <br>
 <h4>Running latex<br>
 </h4>
-To create a postscript file, use <span style="font-family: monospace;">elatex</span>
-and <span style="font-family: monospace;">dvips</span>.<br>
-To create a pdf file run <span style="font-family: monospace;">ps2pdf </span>or
+<ul>
+  <li>To create a postscript file, use <span
+ style="font-family: monospace;">elatex</span>
+and <span style="font-family: monospace;">dvips</span>.</li>
+  <li>To create a pdf file run <span style="font-family: monospace;">ps2pdf
+    </span>or
 some other distiller on your <span style="font-family: monospace;">.ps</span>
 file.<br>
-<span style="font-style: italic;">Important: Do not use pdflatex or
-dvipdf(m) if you are using Hebrew vowel-points (Nikud).</span><br
- style="font-family: monospace;">
-<br>
+    <span style="font-style: italic;">Important: Do not use pdflatex or
+dvipdf(m) if you are using Hebrew vowel-points (Nikud).</span></li>
+</ul>
 <h2><a name="samples"></a>Samples</h2>
 Samples are in <span style="font-family: monospace;">texmf/doc/latex/nikud/samples</span>
 directory (see the Makefile there). The source is utf-8 encoded. You
