@@ -1,4 +1,3 @@
-%define name nikud
 %define release 1
 
 Summary: Hebrew Culmus fonts in LaTeX with Nikud
@@ -7,7 +6,7 @@ Version: %{version}
 Release: %{release}
 Copyright: GNU GPL
 Group: Publishing
-Source: http://download.berlios.de/nikud/nikud-%{version}.tar.bz2
+Source: http://download.berlios.de/nikud/%{name}-%{version}.tar.bz2
 URL: http://nikud.berlios.de/
 Distribution: Linux
 Vendor: Itai Levi
