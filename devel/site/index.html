@@ -7,20 +7,33 @@
 </head>
 <body>
 <h1>Nikud - Hebrew Culmus fonts in LaTeX with vowel-point placing</h1>
-First of all, an example of the output:<br>
-<div style="text-align: center;"><img src="hebsample.jpg" title=""
- alt="Hebrew sample" style="width: 351px; height: 306px;"><br>
-</div>
 <br>
-This project will provide all the files needed to use <a
- href="culmus.sf.net">Culmus</a> fonts in Latex (elatex) with Nikud.<br>
-Vowel-points are placed using a type-3 Postscript font that wraps
+<br>
+<h2>Project highlights</h2>
+<ul>
+  <li>Culmus fonts replaces poor Hebrew Metafonts.</li>
+  <li>Good vowel-point placing</li>
+  <li>Hebrew bibliography</li>
+  <li>Smart Hebrew references</li>
+  <li>Easy to use<br>
+  </li>
+</ul>
+<h2>An example of the output</h2>
+<div style="text-align: center;"><img src="hebsample.jpg" title=""
+ alt="Hebrew sample" style="width: 383px; height: 307px;"><br>
+</div>
+<h2>Details<br>
+</h2>
+This project provides all the files needed to use <a
+ href="culmus.sf.net">Culmus</a> fonts in Latex (elatex) with Hebrew
+vowel-points (Nikud). Vowel-points are placed using type-3 Postscript
+fonts that wrap
 Culmus fonts. The Type-3 fonts are an implementation of a method
 publish by Sivan Toledo for <a
  href="http://www.cs.tau.ac.il/%7Estoledo/Pubs/vowels.ps">Vowel-point
 placing</a>.<br>
 <br>
-The package currently uses Culmus fonts from version 0.90, and includes
+The package currently uses Culmus fonts from version 0.93, and includes
 all the needed fonts.<br>
 <br>
 Also included, is a modified version of <span
@@ -89,9 +102,13 @@ Soon.<br>
 <h4>preparing the source file<br>
 </h4>
 You have to use the installed package <span
- style="font-family: monospace;">culmus.sty</span>, after <span
- style="font-family: monospace;">\documentclass... </span>like this: <span
- style="font-family: monospace;">\usepackage{culmus}</span><br>
+ style="font-family: monospace;">culmus.sty</span>:<br>
+<br>
+<span style="font-family: monospace;">\documentclass...<br>
+</span><span style="font-family: monospace;">\usepackage{culmus}<br>
+<br>
+</span>(<span style="font-family: monospace;">babel </span>is
+implicitly included by <span style="font-family: monospace;">culmus.sty</span>)<br>
 <br>
 Source file should be <span style="font-style: italic;">cp1255</span>
 encoded (or <span style="font-style: italic;">ISO-8859-8</span>, if
