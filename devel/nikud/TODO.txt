@@ -6,12 +6,12 @@
   miriam didn't change.
 - done: change font names to prevent conflict with other packages
 - done: also change font directory in fonts
-- build rpm - write a script that uses rpm and not 'crust'
+- done: build rpm - write a script that uses rpm and not 'crust'
 - put instructions from the paper in a file an dadd it to the cvs
 - dependencies in rpm ?
 - change long example
-- add nachlieli to short example
-- patch version into spec file
+- done: add nachlieli to short example
+- done: patch version into spec file
 
 
 
