@@ -1,7 +1,7 @@
 #/bin/sh
 
 NEWROOT=~/crust_newroot
-VERSION=0.9.3
+VERSION=0.100
 RELEASE=1
 
 rm -fr $NEWROOT

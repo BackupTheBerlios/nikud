@@ -1,3 +1,12 @@
+- fix nikud for new culmus 0.100 - go over examples and fix .special files
+- fix babel fd files:
+  change xxxCulmusScale to new values, according to new culmus size:
+  frank is now smaller ( ver 0.100 is 0.832 times smaller than ver 0.93)
+  nachlieli is now smaller ( ver 0.100 is 0.916 times smaller than ver 0.93)
+  miriam didn't change.
+- build rpm - write a script that uses rpm and not 'crust'
+
+
+
 1) add nukid to David, Aharoni
 2) create culmus.sty with settings like fontenc inputenc ...
-3) make a better sample with -, --, \L, \R, nikud, ligature for ayin
