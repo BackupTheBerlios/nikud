@@ -7,14 +7,33 @@
 </head>
 <body>
 <h1>Nikud - Hebrew Culmus fonts in LaTeX with vowel-point placing</h1>
+First of all, an example of the output:<br>
+<img src="hebsample.jpg" title="" alt="Hebrew sample"
+ style="width: 560px; height: 284px;"><br>
+<br>
+<br>
 This project will provide all the files needed to use <a
  href="culmus.sf.net">Culmus</a> fonts in Latex (elatex) with Nikud.<br>
 Vowel-points are placed using a type-3 Postscript font that wraps
 Culmus fonts. The Type-3 fonts are an implementation of a method
-publish by Sivan Toledo for Vowel-point placing.<br>
+publish by Sivan Toledo for <a
+ href="http://www.cs.tau.ac.il/%7Estoledo/Pubs/vowels.ps">Vowel-point
+placing</a>.<br>
+<br>
+The package contains the needed Culmus fonts.<br>
+<br>
+Also included, is a modified version of <span
+ style="font-family: monospace;">varioref.sty</span> package -- <span
+ style="font-family: monospace;">variorefh.sty</span>, and a modified
+version of <span style="font-family: monospace;">multibib.sty</span>
+-- <span style="font-family: monospace;">multibibheb.sty</span>. These
+are for Hebrew cross-referencing and bibliography. See <a
+ href="#samples">samples</a><br>
 <br>
 <br>
 <h2>Downloading and installing</h2>
+Project page in Berlios: <a
+ href="http://developer.berlios.de/projects/nikud/">http://developer.berlios.de/projects/nikud/</a><br>
 <h4>A remark on texmf tree</h4>
 If you want to work locally (recommended), make sure you have a local
 texmf tree: edit <span style="font-family: monospace;">texmf.cnf</span>
@@ -40,10 +59,11 @@ config" config.ps</span></li>
  style="font-family: monospace; font-weight: bold;">
   </li>
 </ol>
-<h3>Source</h3>
-To compile the fonts, you need the following packages installed: <span
+<h3>Source (Linux only)<br>
+</h3>
+To compile the fonts, the following packages must be installed: <span
  style="font-family: monospace;">tetex, afm, tetex-latex, dvips, iconv,
-perl</span><br>
+perl</span>.<br>
 <ol>
   <li>Untar nikud_source.tar.bz2.</li>
   <li>Edit <span style="font-family: monospace;">Makefile </span>and
@@ -88,10 +108,18 @@ file.<br>
 dvipdf(m) if you are using Hebrew vowel-points (Nikud).</span><br
  style="font-family: monospace;">
 <br>
-<h2>Samples</h2>
+<h2><a name="samples"></a>Samples</h2>
 Samples are in <span style="font-family: monospace;">texmf/doc/latex/nikud/samples</span>
 directory (see the Makefile there). The source is utf-8 encoded. You
-may use emacs-bidi as an editor.<br>
+may use <a href="http://www.m17n.org/emacs-bidi/">emacs-bidi</a> as an
+editor.<br>
+<br>
+<h2>Links</h2>
+Culmus fonts: <a href="http://culmus.sf.net">culmus.sf.net</a><br>
+Emacs Bidi: <a href="http://www.m17n.org/emacs-bidi/">http://www.m17n.org/emacs-bidi/</a>,
+and my <span style="font-family: monospace;">.emacs</span> file: <a
+ href="ftp://ftp.berlios.de/pub/nikud/utils/.emacs">ftp://ftp.berlios.de/pub/nikud/utils/.emacs</a><br>
+<br>
 <br>
 <br>
 This project is hosted by <a href="http://developer.berlios.de"> <img

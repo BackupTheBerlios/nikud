@@ -41,9 +41,10 @@ install:
 	$(MKDIR) $(LOCAL_BABEL_DIR)
 	$(CP) babel/*fd babel/*def babel/*.sty $(LOCAL_BABEL_DIR)
 	$(CP) -r bibtex_stuff/bibtex $(TEXMFDIR)
-	$(CP) -r bibtex_stuff/biblio "$(TEXMFDIR)/tex"
-	$(MKDIR) "$(TEXMFDIR)/tex/latex"
-	$(CP) -r tools "$(TEXMFDIR)/tex/latex"
+	$(MKDIR) $(TEXMFDIR)/tex/biblio
+	$(CP) -r bibtex_stuff/biblio/*.sty "$(TEXMFDIR)/tex/biblio"
+	$(MKDIR) "$(TEXMFDIR)/tex/latex/tools"
+	$(CP) -r tools/*.sty "$(TEXMFDIR)/tex/latex/tools"
 	$(MKDIR) "$(SAMPLES_DIR)"
 	$(CP) -r samples/* "$(SAMPLES_DIR)"
 	mktexlsr
