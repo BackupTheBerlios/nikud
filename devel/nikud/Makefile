@@ -1,3 +1,4 @@
+BABEL_3_8 =
 DESTDIR = $(HOME)/texmf
 MKTEXLSR = mktexlsr
 TEXMFDIR = $(DESTDIR)
@@ -18,6 +19,12 @@ RM = rm -fr
 CP = cp -f
 MKDIR = mkdir -p
 
+ifdef BABEL_3_8
+	BABEL_SPECIFIC_DIR = 3.8_only
+else
+	BABEL_SPECIFIC_DIR = 3.7_only
+endif
+
 all: 	frankClmNkd.vf frankClmNkdb.vf frankClmNkdbi.vf frankClmNkdi.vf \
 	miriamClmNkdb.vf miriamClmNkdbi.vf miriamClmNkd.vf miriamClmNkdi.vf \
 	nachlieliClmNkdb.vf nachlieliClmNkdbi.vf nachlieliClmNkd.vf nachlieliClmNkdi.vf \
@@ -27,7 +34,7 @@ all: 	frankClmNkd.vf frankClmNkdb.vf frankClmNkdbi.vf frankClmNkdi.vf \
 clean:
 	$(RM) *.vf *.tfm *.vpl *.map *~ 
 	$(RM) $(TMP_FILE) $(AFM_TEMP_FILE) *.t3 *.ps 
-	$(RM) $(TEST_DIR)/*.ps babel/*~
+	$(RM) $(TEST_DIR)/*.ps babel/*~ babel/3.7_only/*~ babel/3.8_only/*~
 	make -C samples/long clean
 	make -C samples/short clean
 	make -C samples/poem clean
@@ -64,12 +71,15 @@ install:
 	$(CP) $(CULMUS_DIR)/*.pfa "$(TEXFONTSDIR)/type1/hebrew/culmus/nikud/"
 	$(CP) *.t3 "$(TEXFONTSDIR)/type1/hebrew/culmus/nikud/"
 	$(MKDIR) $(LOCAL_BABEL_DIR)
-	$(CP) babel/*fd babel/*def babel/*.sty $(LOCAL_BABEL_DIR)
-	$(CP) -r bibtex_stuff/bibtex $(TEXMFDIR)
+	$(CP) babel/*fd babel/*.sty $(LOCAL_BABEL_DIR)
+	$(CP) babel/$(BABEL_SPECIFIC_DIR)/*.def $(LOCAL_BABEL_DIR)
+	$(MKDIR) "$(TEXMFDIR)/bibtex/bst"
+	$(CP) bibtex_stuff/bibtex/bst/*.bst "$(TEXMFDIR)/bibtex/bst"
+	$(CP) bibtex_stuff/bibtex/bst/$(BABEL_SPECIFIC_DIR)/*.bst "$(TEXMFDIR)/bibtex/bst"
 	$(MKDIR) $(TEXMFDIR)/tex/biblio
 	$(CP) -r bibtex_stuff/biblio/*.sty "$(TEXMFDIR)/tex/biblio"
 	$(MKDIR) "$(TEXMFDIR)/tex/latex/tools"
-	$(CP) -r tools/*.sty "$(TEXMFDIR)/tex/latex/tools"
+	$(CP) -r tools/$(BABEL_SPECIFIC_DIR)/*.sty "$(TEXMFDIR)/tex/latex/tools"
 	$(MKDIR) "$(SAMPLES_DIR)"
 	$(CP) -r samples/* "$(SAMPLES_DIR)"
 	$(MKTEXLSR)

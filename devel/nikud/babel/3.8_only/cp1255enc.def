@@ -1,0 +1,138 @@
+%%
+%% This is file `he8enc.def',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% hebrew.fdd  (with options: `cp1255enc')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright 1997-2004 Boris Lavva and any individual authors
+%% listed elsewhere in this file. All rights reserved.
+%% 
+%% This is a generated file.
+%% 
+%% Copyright 1989-2004 Johannes L. Braams and any individual authors
+%% listed elsewhere in this file.  All rights reserved.
+%% 
+%% This file was generated from file(s) of the Babel system.
+%% ---------------------------------------------------------
+%% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%% 
+%% This work has the LPPL maintenance status "maintained".
+%% 
+%% The Current Maintainer of this work is Johannes Braams.
+%% 
+%% This file may only be distributed together with a copy of the Babel
+%% system. You may however distribute the Babel system without
+%% such generated files.
+%% 
+%% The list of all files belonging to the Babel distribution is
+%% given in the file `manifest.bbl'. See also `legal.bbl for additional
+%% information.
+%% 
+%% In particular, permission is granted to customize the declarations in
+%% this file to serve the needs of your installation.
+%% 
+%% However, NO PERMISSION is granted to distribute a modified version
+%% of this file under its original name.
+%% 
+%% File `hebrew.fdd' for installing the Hebrew encodings and fonts.
+%% Copyright (C) 1997 -- 2004 Boris Lavva.
+%% Babel package for LaTeX version 2e
+%% Copyright (C) 1989 -- 2004 by Johannes Braams,
+%%                            TeXniek
+%%                            All rights reserved.
+\ProvidesFile{cp1255enc.def}
+        [2004/02/20 v1.2b %
+                 8-bit Hebrew font encoding
+         (test version: still liable to change)]
+\DeclareFontEncoding{cp1255}{}{}
+\DeclareFontSubstitution{cp1255}{cmr}{m}{n}
+\DeclareErrorFont{cp1255}{cmr}{m}{n}{10}
+\ProvideTextCommand{\textcopyright}{cp1255}{\textcircled{\@latin{c}}}
+\ProvideTextCommand{\textregistered}{cp1255}{\textcircled{\scshape%
+                                          \@latin{r}}}
+\ProvideTextCommand{\texttrademark}{cp1255}{\textsuperscript{\@latin{TM}}}
+\ProvideTextCommand{\textcopyright}{cp1255}{\textcircled{\@latin{c}}}
+\ProvideTextCommand{\textregistered}{cp1255}{\textcircled{\scshape%
+                                          \@latin{r}}}
+\ProvideTextCommand{\texttrademark}{cp1255}{\textsuperscript{\@latin{TM}}}
+\DeclareTextSymbol{\hebsheva}{cp1255}{192}
+\DeclareTextSymbol{\hebhatafsegol}{cp1255}{193}
+\DeclareTextSymbol{\hebhatafpatah}{cp1255}{194}
+\DeclareTextSymbol{\hebhatafqamats}{cp1255}{195}
+\DeclareTextSymbol{\hebhiriq}{cp1255}{196}
+\DeclareTextSymbol{\hebtsere}{cp1255}{197}
+\DeclareTextSymbol{\hebsegol}{cp1255}{198}
+\DeclareTextSymbol{\hebpatah}{cp1255}{199}
+\DeclareTextSymbol{\hebqamats}{cp1255}{200}
+\DeclareTextSymbol{\hebholam}{cp1255}{201}
+\DeclareTextSymbol{\hebqubuts}{cp1255}{203}
+\DeclareTextSymbol{\hebdagesh}{cp1255}{204}
+\DeclareTextSymbol{\hebmeteg}{cp1255}{205}
+\DeclareTextSymbol{\hebmaqaf}{cp1255}{206}
+\DeclareTextSymbol{\hebrafe}{cp1255}{207}
+\DeclareTextSymbol{\hebpaseq}{cp1255}{208}
+\DeclareTextSymbol{\hebshindot}{cp1255}{209}
+\DeclareTextSymbol{\hebsindot}{cp1255}{210}
+\DeclareTextSymbol{\hebsofpasuq}{cp1255}{211}
+\DeclareTextSymbol{\hebdoublevav}{cp1255}{212}
+\DeclareTextSymbol{\hebvavyod}{cp1255}{213}
+\DeclareTextSymbol{\hebdoubleyod}{cp1255}{214}
+\DeclareTextSymbol{\hebalef}{cp1255}{224}
+\DeclareTextSymbol{\hebbet}{cp1255}{225}
+\DeclareTextSymbol{\hebgimel}{cp1255}{226}
+\DeclareTextSymbol{\hebdalet}{cp1255}{227}
+\DeclareTextSymbol{\hebhe}{cp1255}{228}
+\DeclareTextSymbol{\hebvav}{cp1255}{229}
+\DeclareTextSymbol{\hebzayin}{cp1255}{230}
+\DeclareTextSymbol{\hebhet}{cp1255}{231}
+\DeclareTextSymbol{\hebtet}{cp1255}{232}
+\DeclareTextSymbol{\hebyod}{cp1255}{233}
+\DeclareTextSymbol{\hebfinalkaf}{cp1255}{234}
+\DeclareTextSymbol{\hebkaf}{cp1255}{235}
+\DeclareTextSymbol{\heblamed}{cp1255}{236}
+\DeclareTextSymbol{\hebfinalmem}{cp1255}{237}
+\DeclareTextSymbol{\hebmem}{cp1255}{238}
+\DeclareTextSymbol{\hebfinalnun}{cp1255}{239}
+\DeclareTextSymbol{\hebnun}{cp1255}{240}
+\DeclareTextSymbol{\hebsamekh}{cp1255}{241}
+\DeclareTextSymbol{\hebayin}{cp1255}{242}
+\DeclareTextSymbol{\hebfinalpe}{cp1255}{243}
+\DeclareTextSymbol{\hebpe}{cp1255}{244}
+\DeclareTextSymbol{\hebfinaltsadi}{cp1255}{245}
+\DeclareTextSymbol{\hebtsadi}{cp1255}{246}
+\DeclareTextSymbol{\hebqof}{cp1255}{247}
+\DeclareTextSymbol{\hebresh}{cp1255}{248}
+\DeclareTextSymbol{\hebshin}{cp1255}{249}
+\DeclareTextSymbol{\hebtav}{cp1255}{250}
+\let\hebsin=\hebshin
+%%
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%%
+\endinput
+%%
+%% End of file `he8enc.def'.
