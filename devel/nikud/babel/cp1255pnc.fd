@@ -1,0 +1,55 @@
+%%
+%% This is file `cp1255pnc.fd',
+%% 
+\ProvidesFile{cp1255pnc.fd}
+        [2003/04/20 v1.0
+         Hebrew cp1255 font
+         (test version: still liable to change)]
+\def\PncCulmusScale{1.00}
+\DeclareFontFamily{cp1255}{pnc}{\hyphenchar\font45}
+\DeclareFontShape{cp1255}{pnc}{m}{n}
+      {<-> [\PncCulmusScale] frank }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pnc}{m}{sc}
+  {<->ssub * pnc/m/n}{}
+%%%%%%% Italicized shape
+\DeclareFontShape{cp1255}{pnc}{m}{it}
+      {<-> [\PncCulmusScale] franki }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pnc}{m}{sl}
+  {<->ssub * pnc/m/it}{}
+%%%%%%% Bold extended series
+\DeclareFontShape{cp1255}{pnc}{bx}{n}
+      {<-> [\PncCulmusScale] frankb }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pnc}{b}{n}
+  {<->ssub * pnc/bx/n}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pnc}{b}{it}
+  {<->ssub * pnc/bx/it}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pnc}{bx}{sl}
+  {<->ssub * pnc/bx/n}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pnc}{bx}{it}
+  {<-> [\PncCulmusScale] frankbi }{}
+%%
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%%
+\endinput
+%%
+%% End of file `cp1255pnc.fd'.

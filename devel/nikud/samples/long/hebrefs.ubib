@@ -1,0 +1,32 @@
+@PREAMBLE{"\newcommand{\noopsort}[1]{}"}
+
+@Book{izik2001,
+  author = 	 "יצחק כהן and יעקב לוי and שַמְעוֹן שלום",
+  title = 	 "הכל אבוד",
+  publisher = 	 "פינגו",
+  year = 	 "2001"
+}
+
+@Book{izik1999,
+  author = 	 "יצחק כהן and רמי שדוף",
+  title = 	 "גידול דשא בעשרים ואחד יום",
+  publisher = 	 "עלה ירוק",
+  year = 	 "1999"
+}
+
+@InBook{eli2003,
+  author = 	 "אליהו נווה",
+  title = 	 "תסריט קרנבל החיות",
+  publisher = 	 "פינגה הקטנה",
+  year = 	 "2003",
+  pages = 	 "78-123"
+}
+
+@Article{ruth2003,
+  author = 	 "רות המואביה",
+  title = 	 "במשעולי הנפש",
+  journal = 	 "המגזין לתכנון נכון",
+  year = 	 "2003",
+  volume = 	 "17"
+}
+

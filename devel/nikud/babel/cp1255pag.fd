@@ -1,0 +1,55 @@
+%%
+%% This is file `cp1255pag.fd',
+%% 
+\ProvidesFile{cp1255pag.fd}
+        [2003/04/20 v1.0
+         Hebrew cp1255 font
+         (test version: still liable to change)]
+\def\PagCulmusScale{1.00}
+\DeclareFontFamily{cp1255}{pag}{\hyphenchar\font45}
+\DeclareFontShape{cp1255}{pag}{m}{n}
+      {<-> [\PagCulmusScale] nachlieli }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pag}{m}{sc}
+  {<->ssub * pag/m/n}{}
+%%%%%%% Italicized shape
+\DeclareFontShape{cp1255}{pag}{m}{it}
+      {<-> [\PagCulmusScale] nachlielii }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pag}{m}{sl}
+  {<->ssub * pag/m/it}{}
+%%%%%%% Bold extended series
+\DeclareFontShape{cp1255}{pag}{bx}{n}
+      {<-> [\PagCulmusScale] nachlielib }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pag}{b}{n}
+  {<->ssub * pag/bx/n}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pag}{b}{it}
+  {<->ssub * pag/bx/it}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pag}{bx}{sl}
+  {<->ssub * pag/bx/n}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pag}{bx}{it}
+  {<-> [\PagCulmusScale] nachlielibi }{}
+%%
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%%
+\endinput
+%%
+%% End of file `cp1255pag.fd'.

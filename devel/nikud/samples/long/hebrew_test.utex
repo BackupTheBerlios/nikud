@@ -1,0 +1,132 @@
+%%  -*-TeX-*-
+\documentclass[a4paper,draft,12pt,oneside]{book} 
+\usepackage{newcent}
+\usepackage{culmus} %options are 'newcent' or 'times' and any babel option
+
+\pagestyle{plain} 
+\setcounter{secnumdepth}{1} 
+\setcounter{tocdepth}{3} 
+
+\usepackage{setspace} 
+%\doublespacing 
+\onehalfspacing
+
+\sethebrew
+\hyphenation{ופסי-כו-לו-גיה אבו-לו-ציו-נית}
+
+%%%%%% To work with hebrew + english bibliography
+\usepackage[round]{natbibheb}
+\usepackage{multibibheb}
+\newcites{eng,heb}{References in English,מקורות בעברית}
+%%%%%% 
+
+\begin{document} 
+
+\frontmatter
+
+\sethebrew
+\tableofcontents 
+
+\mainmatter
+
+\sethebrew
+
+\chapter{מעבר לאופק} 
+
+
+\section{דוגמה לטקסט מנוקד )בחלקו(}
+
+שָׁלוֹם רַב לְכֻלַּם.
+ 
+\begin{LARGE}שלום עולם, שלום עַכשיו \end{LARGE}
+
+\textrm{פָּרָה}
+
+\textbf{פָּרָה}
+
+\textit{פָּרָה}
+
+\texttt{פָּרָה}
+
+\textsf{פָּרָה}
+
+\textsf{\textit{פָּרָה}}
+\textsf{\textbf{פָּרָה}}
+
+נִיסַיון!!
+ 
+ 
+\section{טקסט אחר} 
+\sethebrew 
+ 
+כמה מילים בעברית.
+
+\unsethebrew
+\section{\L{Citations in English}}
+
+\begin{description}
+\item[citet] For single author: \citeteng{diego1988}.
+\item[citet] For multiple authors with page number: \citeteng[pp.~35]{balili1987}.
+\item[citet] Multiple citations: \citeteng{diego1988,balili1987}.
+\item[citep] For single author: \citepeng{diego1988}.
+\item[citep] For multiple authors with page number: \citepeng[see][pp.~35]{balili1987}.
+\item[citep] Multiple citations: \citepeng{diego1988,balili1987}.
+\item[citep*] For single author: \citepeng*{diego1988}.
+\item[citep*] For multiple authors with page number: \citepeng*[see][pp.~35]{balili1987}.
+\item[citeauthor] For single author: \citeauthoreng{diego1988}.
+\item[citeauthor] For multiple authors with page number: \citeauthoreng[pp.~35]{balili1987}.
+\item[citeauthor*] For single author: \citeauthoreng*{diego1988}.
+\item[citeauthor*] For multiple authors with page number: \citeauthoreng*[pp.~35]{balili1987}.
+\item[citeyear] For single author: \citeyeareng{diego1988}.
+\item[citeyear] For multiple authors with page number: \citeyeareng[pp.~35]{balili1987}.
+\item[citeyearpar] For single author: \citeyearpareng{diego1988}.
+\item[citeyearpar] For multiple authors with page number: \citeyearpareng[pp.~35]{balili1987}.
+
+\end{description}
+
+\sethebrew
+
+\section{להלן ציטוטים בעברית}
+\begin{description}
+\item[\L{citet}] מחבר יחיד: \citetheb{eli2003} וגם \citetheb{ruth2003}.
+\item[\L{citet}] יותר משני מחברים עם מספר עמוד: \citetheb[עמ'~\beginL 35\endL]{izik2001}.
+\item[\L{citet*}] יותר משני מחברים עם מספר עמוד: \citetheb*[עמ'~\beginL 35\endL]{izik2001}.
+
+\item[\L{citet}] שני מחברים עם סופית: \citetheb[בפרק האחרון]{izik1999}.
+
+\item[\L{citep}] מחבר יחיד: \citepheb{eli2003} וגם \citepheb{ruth2003}.
+\item[\L{citep}] יותר משני מחברים עם מספר עמוד: \citepheb[עמ'~\beginL 35\endL]{izik2001}.
+\item[\L{citep*}] יותר משני מחברים עם מספר עמוד: \citepheb*[עמ'~\beginL 35\endL]{izik2001}.
+
+\item[\L{citep}] שני מחברים עם תחילית וסופית: \citepheb[ראו][בפרק האחרון]{izik1999}.
+
+\item[\L{citeauthor}] מחבר יחיד: \citeauthorheb{eli2003} וגם \citeauthorheb{ruth2003}.
+\item[\L{citeauthor}] יותר משני מחברים עם מספר עמוד: \citeauthorheb[עמ'~\beginL 35\endL]{izik2001}.
+\item[\L{citeauthor*}] יותר משני מחברים עם מספר עמוד: \citeauthorheb*[עמ'~\beginL 35\endL]{izik2001}.
+
+\item[\L{citeauthor}] שני מחברים עם סופית: \citeauthorheb[בפרק האחרון]{izik1999}.
+
+
+\item[\L{citeyear}] מחבר יחיד: \citeyearheb{eli2003} וגם \citeyearheb{ruth2003}.
+\item[\L{citeyear}] יותר משני מחברים עם מספר עמוד: \citeyearheb[עמ'~\beginL 35\endL]{izik2001}.
+\item[\L{citeyear}] שני מחברים עם סופית: \citeyearheb[בפרק האחרון]{izik1999}.
+
+\item[\L{citeyearpar}] מחבר יחיד: \citeyearparheb{eli2003} וגם \citeyearparheb{ruth2003}.
+\item[\L{citeyearpar}] יותר משני מחברים עם מספר עמוד: \citeyearparheb[עמ'~\beginL 35\endL]{izik2001}.
+\item[\L{citeyearpar}] שני מחברים עם סופית: \citeyearparheb[בפרק האחרון]{izik1999}.
+
+
+\end{description}
+
+% \nociteheb{*}
+% \nociteeng{*}
+
+\unsethebrew
+\bibliographystyleeng{chicagoi}
+\bibliographyeng{engrefs}
+
+\sethebrew
+\bibliographystyleheb{chicagoiheb}
+\bibliographyheb{hebrefs}
+
+\end{document}

@@ -1,0 +1,33 @@
+%%  -*-TeX-*-
+\documentclass[a4paper,draft,11pt,oneside]{article} 
+\usepackage{newcent} % looks good with hebrew (heavy font)
+\usepackage{culmus} 
+%% options to culmus package are 'newcent' or 'times' and any babel option
+
+
+\begin{document} 
+
+\sethebrew
+זהו משפט בְּעִבְרִית.
+
+משפט ובו גם \L{two words} באנגלית.
+
+מקף מחבר כמו ב'בית-הספר' מתקבל על ידי מקף בודד )\L{\texttt{-}}(.
+
+מקף מפריד -- מתקבל על ידי שני מקפים צמודים )\L{\texttt{{-}{-}}}(.
+
+את סימני הניקוד יש להכניס \emph{אחרי} האות, כאשר ה'דגש' הוא הראשון
+מביניהם.
+
+'מרכאות' רגילות על ידי )\texttt{'}(
+
+"מרכאות" ''כפולות''  על ידי )\texttt{''}( או על ידי )\texttt{"}(
+
+\unsethebrew
+This is an English sentence.
+
+Mixed English and \R{עברית} in the same paragraph.
+
+Some ligatures: fine file ff ffi fl ffl
+
+\end{document}

@@ -1,0 +1,55 @@
+%%
+%% This is file `cp1255pcr.fd',
+%% 
+\ProvidesFile{cp1255pcr.fd}
+        [2003/04/20 v1.0
+         Hebrew cp1255 font
+         (test version: still liable to change)]
+\def\PcrCulmusScale{0.92}
+\DeclareFontFamily{cp1255}{pcr}{\hyphenchar\font45}
+\DeclareFontShape{cp1255}{pcr}{m}{n}
+      {<-> [\PcrCulmusScale] miriam }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pcr}{m}{sc}
+  {<->ssub * pcr/m/n}{}
+%%%%%%% Italicized shape
+\DeclareFontShape{cp1255}{pcr}{m}{it}
+      {<-> [\PcrCulmusScale] miriami }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pcr}{m}{sl}
+  {<->ssub * pcr/m/it}{}
+%%%%%%% Bold extended series
+\DeclareFontShape{cp1255}{pcr}{bx}{n}
+      {<-> [\PcrCulmusScale] miriamb }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pcr}{b}{n}
+  {<->ssub * pcr/bx/n}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pcr}{b}{it}
+  {<->ssub * pcr/bx/it}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pcr}{bx}{sl}
+  {<->ssub * pcr/bx/n}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{cp1255}{pcr}{bx}{it}
+  {<-> [\PcrCulmusScale] miriambi }{}
+%%
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%%
+\endinput
+%%
+%% End of file `cp1255pcr.fd'.

@@ -1,0 +1,88 @@
+%%
+%% This is file `cp1255enc.def',
+%% 
+\ProvidesFile{cp1255enc.def}
+        [2003/04/20 v1.0
+         8-bit Hebrew font encoding with nikud
+         (test version: still liable to change)]
+\DeclareFontEncoding{cp1255}{}{}
+\DeclareFontSubstitution{cp1255}{cmr}{m}{n}
+\DeclareErrorFont{cp1255}{cmr}{m}{n}{10}
+\ProvideTextCommand{\textcopyright}{cp1255}{\textcircled{\@latin{c}}}
+\ProvideTextCommand{\textregistered}{cp1255}{\textcircled{\scshape%
+                                          \@latin{r}}}
+\ProvideTextCommand{\texttrademark}{cp1255}{\textsuperscript{\@latin{TM}}}
+\lccode``=`` %^^A ''
+
+\DeclareTextSymbol{\sheva}{cp1255}{192}
+\DeclareTextSymbol{\hatafsegol}{cp1255}{193}
+\DeclareTextSymbol{\hatafpatah}{cp1255}{194}
+\DeclareTextSymbol{\hatafqamats}{cp1255}{195}
+\DeclareTextSymbol{\hiriq}{cp1255}{196}
+\DeclareTextSymbol{\tsere}{cp1255}{197}
+\DeclareTextSymbol{\segol}{cp1255}{198}
+\DeclareTextSymbol{\patah}{cp1255}{199}
+\DeclareTextSymbol{\qamats}{cp1255}{200}
+\DeclareTextSymbol{\holam}{cp1255}{201}
+\DeclareTextSymbol{\qubuts}{cp1255}{203}
+\DeclareTextSymbol{\dagesh}{cp1255}{204}
+\DeclareTextSymbol{\meteg}{cp1255}{205}
+\DeclareTextSymbol{\maqaf}{cp1255}{206}
+\DeclareTextSymbol{\rafe}{cp1255}{207}
+\DeclareTextSymbol{\paseq}{cp1255}{208}
+\DeclareTextSymbol{\shindot}{cp1255}{209}
+\DeclareTextSymbol{\sindot}{cp1255}{210}
+\DeclareTextSymbol{\sofpasuq}{cp1255}{211}
+\DeclareTextSymbol{\doublevav}{cp1255}{212}
+\DeclareTextSymbol{\vavyod}{cp1255}{213}
+\DeclareTextSymbol{\doubleyod}{cp1255}{214}
+%
+\DeclareTextSymbol{\alef}{cp1255}{224}
+\DeclareTextSymbol{\bet}{cp1255}{225}
+\DeclareTextSymbol{\gimel}{cp1255}{226}
+\DeclareTextSymbol{\dalet}{cp1255}{227}
+\DeclareTextSymbol{\he}{cp1255}{228}
+\DeclareTextSymbol{\vav}{cp1255}{229}
+\DeclareTextSymbol{\zayin}{cp1255}{230}
+\DeclareTextSymbol{\het}{cp1255}{231}
+\DeclareTextSymbol{\tet}{cp1255}{232}
+\DeclareTextSymbol{\yod}{cp1255}{233}
+\DeclareTextSymbol{\finalkaf}{cp1255}{234}
+\DeclareTextSymbol{\kaf}{cp1255}{235}
+\DeclareTextSymbol{\lamed}{cp1255}{236}
+\DeclareTextSymbol{\finalmem}{cp1255}{237}
+\DeclareTextSymbol{\mem}{cp1255}{238}
+\DeclareTextSymbol{\finalnun}{cp1255}{239}
+\DeclareTextSymbol{\nun}{cp1255}{240}
+\DeclareTextSymbol{\samekh}{cp1255}{241}
+\DeclareTextSymbol{\ayin}{cp1255}{242}
+\DeclareTextSymbol{\finalpe}{cp1255}{243}
+\DeclareTextSymbol{\pe}{cp1255}{244}
+\DeclareTextSymbol{\finaltsadi}{cp1255}{245}
+\DeclareTextSymbol{\tsadi}{cp1255}{246}
+\DeclareTextSymbol{\qof}{cp1255}{247}
+\DeclareTextSymbol{\resh}{cp1255}{248}
+\DeclareTextSymbol{\shin}{cp1255}{249}
+\DeclareTextSymbol{\tav}{cp1255}{250}
+\let\org@sin=\sin
+\def\sin{\ifmmode\org@sin\else\shin\fi}
+%%
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%%
+\endinput
+%%
+%% End of file `cp1255enc.def'.

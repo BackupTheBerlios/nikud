@@ -1,0 +1,29 @@
+%%  -*-TeX-*-
+%% culmus package: enable use of Hebrew Culmus fonts in LaTeX
+%% currently using fonts:
+%%    FrankRuehl with Nikud
+%%    Nachlieli with Nikud
+%%    Miriam with Nikud
+%%    Ellinia without Nikud
+%%    KtavYad without Nikud
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{culmus}[2003/11/21 v1.0 Hebrew Culmus fonts in LaTeX]
+
+
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{babel}}
+\ProcessOptions\relax
+
+\RequirePackage[cp1255]{inputenc}
+\RequirePackage[cp1255,T1]{fontenc}
+\inputencoding{cp1255}
+
+\frenchspacing
+\tolerance=2000 
+
+\addtolength{\skip\footins}{20pt} 
+
+\RequirePackage[hebrew,english]{babel}
+\def\hebrewencoding{cp1255}
+
+\newcommand{\N}[1]{{\beginL #1\endL}}
