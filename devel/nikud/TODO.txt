@@ -5,7 +5,7 @@
   nachlieli is now smaller ( ver 0.100 is 0.916 times smaller than ver 0.93)
   miriam didn't change.
 - done: change font names to prevent conflict with other packages
-  also change font directory in fonts
+- done: also change font directory in fonts
 - build rpm - write a script that uses rpm and not 'crust'
 - put instructions from the paper in a file an dadd it to the cvs
 
