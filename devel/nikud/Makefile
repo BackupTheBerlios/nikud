@@ -12,7 +12,7 @@ CULMUS_DVIPS_MAP_FILE = culmus.map
 LOCAL_BABEL_DIR = $(TEXMFDIR)/tex/hebrew
 SAMPLES_DIR = $(TEXMFDIR)/doc/latex/nikud/samples
 AFM_TEMP_FILE = temp.afm
-CULMUS_DIR = culmus-0.100
+CULMUS_DIR = culmus-0.101
 TEST_DIR = tests
 
 RM = rm -fr
@@ -117,35 +117,35 @@ frankClmNkdi.vf: $(CULMUS_DIR)/FrankRuehlCLM-MediumOblique.afm $(CULMUS_ENC_FILE
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf frankClmNkdi.vpl frankClmNkdi.vf frankClmNkdi.tfm
 
-miriamClmNkdb.vf: $(CULMUS_DIR)/MiriamMonoCLM-Bold.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-Bold.special
+miriamClmNkdb.vf: $(CULMUS_DIR)/MiriamMonoCLM-Bold.afm $(CULMUS_ENC_FILE_WITH_DASHES) MiriamMonoCLM-Bold.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/MiriamMonoCLM-Bold.afm -s MiriamMonoCLM-Bold.special -o MiriamMonoCLM-Bold-Menukad.t3
 	./CreateTest.pl MiriamMonoCLM-Bold > $(TEST_DIR)/Test-MiriamMonoCLM-Bold-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/MiriamMonoCLM-Bold.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdb -T $(CULMUS_ENC_FILE) rmiriamClmNkdb > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdb -T $(CULMUS_ENC_FILE_WITH_DASHES) rmiriamClmNkdb > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf miriamClmNkdb.vpl miriamClmNkdb.vf miriamClmNkdb.tfm
 
-miriamClmNkdbi.vf: $(CULMUS_DIR)/MiriamMonoCLM-BoldOblique.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-BoldOblique.special
+miriamClmNkdbi.vf: $(CULMUS_DIR)/MiriamMonoCLM-BoldOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) MiriamMonoCLM-BoldOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/MiriamMonoCLM-BoldOblique.afm -s MiriamMonoCLM-BoldOblique.special -o MiriamMonoCLM-BoldOblique-Menukad.t3
 	./CreateTest.pl MiriamMonoCLM-BoldOblique > $(TEST_DIR)/Test-MiriamMonoCLM-BoldOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/MiriamMonoCLM-BoldOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdbi -T $(CULMUS_ENC_FILE) rmiriamClmNkdbi > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdbi -T $(CULMUS_ENC_FILE_WITH_DASHES) rmiriamClmNkdbi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf miriamClmNkdbi.vpl miriamClmNkdbi.vf miriamClmNkdbi.tfm
 
-miriamClmNkd.vf: $(CULMUS_DIR)/MiriamMonoCLM-Book.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-Book.special
+miriamClmNkd.vf: $(CULMUS_DIR)/MiriamMonoCLM-Book.afm $(CULMUS_ENC_FILE_WITH_DASHES) MiriamMonoCLM-Book.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/MiriamMonoCLM-Book.afm -s MiriamMonoCLM-Book.special -o MiriamMonoCLM-Book-Menukad.t3
 	./CreateTest.pl MiriamMonoCLM-Book > $(TEST_DIR)/Test-MiriamMonoCLM-Book-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/MiriamMonoCLM-Book.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkd -T $(CULMUS_ENC_FILE) rmiriamClmNkd > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkd -T $(CULMUS_ENC_FILE_WITH_DASHES) rmiriamClmNkd > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf miriamClmNkd.vpl miriamClmNkd.vf miriamClmNkd.tfm
 
-miriamClmNkdi.vf: $(CULMUS_DIR)/MiriamMonoCLM-BookOblique.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-BookOblique.special
+miriamClmNkdi.vf: $(CULMUS_DIR)/MiriamMonoCLM-BookOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) MiriamMonoCLM-BookOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/MiriamMonoCLM-BookOblique.afm -s MiriamMonoCLM-BookOblique.special -o MiriamMonoCLM-BookOblique-Menukad.t3
 	./CreateTest.pl MiriamMonoCLM-BookOblique > $(TEST_DIR)/Test-MiriamMonoCLM-BookOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/MiriamMonoCLM-BookOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdi -T $(CULMUS_ENC_FILE) rmiriamClmNkdi > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdi -T $(CULMUS_ENC_FILE_WITH_DASHES) rmiriamClmNkdi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf miriamClmNkdi.vpl miriamClmNkdi.vf miriamClmNkdi.tfm
 
