@@ -9,7 +9,7 @@
 $scale = 22;
 $startx = 50;
 $starty = 770;
-$culmus_dir = "../culmus-0.90";
+$culmus_dir = "../culmus-0.100";
 $t3dir = "..";
 
 print "%!PS\n";
