@@ -28,7 +28,7 @@ clean:
 	$(RM) $(TEST_DIR)/*.ps babel/*~
 	make -C samples/long clean
 	make -C samples/short clean
-	make -C samples/song clean
+	make -C samples/poem clean
 
 uninstall:
 	$(RM) "$(TEXFONTSDIR)/tfm/hebrew/"
