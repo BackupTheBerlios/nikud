@@ -9,7 +9,7 @@
 - done: build rpm - write a script that uses rpm and not 'crust'
 - put instructions from the paper in a file an dadd it to the cvs
 - dependencies in rpm ?
-- change long example
+- done: change long example
 - done: add nachlieli to short example
 - done: patch version into spec file
 
