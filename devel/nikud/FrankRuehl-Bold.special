@@ -7,7 +7,7 @@ afii57665 afii57807 C -50 0 ;bet dagesh
 
 afii57666 afii57807 C -50 0 ;gimel dagesh
 
-afii57667 C 100 0            ;dalet points moves 100 points to the right from center
+afii57667 C 114 0            ;dalet points moves 100 points to the right from center
 afii57667 afii57801 C 0 0 ;dalet + hatafsegol centered
 afii57667 afii57800 C 0 0 ;dalet + hatafpatah centered
 afii57667 afii57802 C 0 0 ;dalet + hatafqamats centered

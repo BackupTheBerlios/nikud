@@ -243,8 +243,8 @@
 ] def
 
 % Ligature MAQAF MAQAF = hyphen (no emdash in hebrew)
-% LIGKERN afii57645 afii57645 =: hyphen
-% LIGKERN hyphen afii57645 =: hyphen
+% LIGKERN afii57645 afii57645 =: endash
+% LIGKERN endash afii57645 =: emdash
 
 % Ligatures letter+dagesh
 % LIGKERN afii57664 afii57807 =: uniFB30

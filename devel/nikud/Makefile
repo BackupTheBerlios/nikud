@@ -4,11 +4,12 @@ TEXFONTSDIR = $(TEXMFDIR)/fonts
 DVIPSBASEDIR = $(TEXMFDIR)/dvips/base
 TMP_FILE = temp.map
 CULMUS_ENC_FILE = myculmus.enc
+CULMUS_ENC_FILE_FOR_FRANKR = myculmus_frank.enc
 CULMUS_DVIPS_MAP_FILE = culmus.map
 LOCAL_BABEL_DIR = $(TEXMFDIR)/tex/hebrew
 SAMPLES_DIR = $(TEXMFDIR)/doc/latex/nikud/samples
 AFM_TEMP_FILE = temp.afm
-CULMUS_DIR = culmus-0.90
+CULMUS_DIR = culmus-0.93
 TEST_DIR = tests
 
 RM = rm -fr
@@ -33,6 +34,7 @@ uninstall:
 	$(RM) "$(TEXFONTSDIR)/tfm/hebrew/"
 	$(RM) "$(TEXFONTSDIR)/vf/hebrew/"
 	$(RM) "$(DVIPSBASEDIR)/$(CULMUS_ENC_FILE)"
+	$(RM) "$(DVIPSBASEDIR)/$(CULMUS_ENC_FILE_FOR_FRANKR)"
 	$(RM) "$(DVIPSBASEDIR)/$(CULMUS_DVIPS_MAP_FILE)"
 	$(RM) "$(TEXFONTSDIR)/afm/hebrew/"
 	$(RM) "$(TEXFONTSDIR)/type1/hebrew/"
@@ -52,6 +54,7 @@ install:
 	$(CP) *.vf "$(TEXFONTSDIR)/vf/hebrew/"
 	$(MKDIR) "$(DVIPSBASEDIR)/"
 	$(CP) $(CULMUS_ENC_FILE) "$(DVIPSBASEDIR)/"
+	$(CP) $(CULMUS_ENC_FILE_FOR_FRANKR) "$(DVIPSBASEDIR)/"
 	$(CP) $(CULMUS_DVIPS_MAP_FILE) "$(DVIPSBASEDIR)/"
 	$(MKDIR) "$(TEXFONTSDIR)/afm/hebrew/"
 	$(CP) $(CULMUS_DIR)/*.afm "$(TEXFONTSDIR)/afm/hebrew/"
@@ -70,35 +73,35 @@ install:
 	mktexlsr
 
 
-frank.vf: $(CULMUS_DIR)/FrankRuehl-Medium.afm $(CULMUS_ENC_FILE) FrankRuehl-Medium.special
+frank.vf: $(CULMUS_DIR)/FrankRuehl-Medium.afm $(CULMUS_ENC_FILE_FOR_FRANKR) FrankRuehl-Medium.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/FrankRuehl-Medium.afm -s FrankRuehl-Medium.special -o FrankRuehl-Medium-Menukad.t3
 	./CreateTest.pl FrankRuehl-Medium > $(TEST_DIR)/Test-FrankRuehl-Medium-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/FrankRuehl-Medium.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v frank -T $(CULMUS_ENC_FILE) rfrank > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v frank -T $(CULMUS_ENC_FILE_FOR_FRANKR) rfrank > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf frank.vpl frank.vf frank.tfm
 
-frankb.vf: $(CULMUS_DIR)/FrankRuehl-Bold.afm $(CULMUS_ENC_FILE) FrankRuehl-Bold.special
+frankb.vf: $(CULMUS_DIR)/FrankRuehl-Bold.afm $(CULMUS_ENC_FILE_FOR_FRANKR) FrankRuehl-Bold.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/FrankRuehl-Bold.afm -s FrankRuehl-Bold.special -o FrankRuehl-Bold-Menukad.t3
 	./CreateTest.pl FrankRuehl-Bold > $(TEST_DIR)/Test-FrankRuehl-Bold-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/FrankRuehl-Bold.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v frankb -T $(CULMUS_ENC_FILE) rfrankb > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v frankb -T $(CULMUS_ENC_FILE_FOR_FRANKR) rfrankb > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf frankb.vpl frankb.vf frankb.tfm
 
-frankbi.vf: $(CULMUS_DIR)/FrankRuehl-BoldOblique.afm $(CULMUS_ENC_FILE) FrankRuehl-BoldOblique.special
+frankbi.vf: $(CULMUS_DIR)/FrankRuehl-BoldOblique.afm $(CULMUS_ENC_FILE_FOR_FRANKR) FrankRuehl-BoldOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/FrankRuehl-BoldOblique.afm -s FrankRuehl-BoldOblique.special -o FrankRuehl-BoldOblique-Menukad.t3
 	./CreateTest.pl FrankRuehl-BoldOblique > $(TEST_DIR)/Test-FrankRuehl-BoldOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/FrankRuehl-BoldOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v frankbi -T $(CULMUS_ENC_FILE) rfrankbi > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v frankbi -T $(CULMUS_ENC_FILE_FOR_FRANKR) rfrankbi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf frankbi.vpl frankbi.vf frankbi.tfm
 
-franki.vf: $(CULMUS_DIR)/FrankRuehl-MediumOblique.afm $(CULMUS_ENC_FILE) FrankRuehl-MediumOblique.special
+franki.vf: $(CULMUS_DIR)/FrankRuehl-MediumOblique.afm $(CULMUS_ENC_FILE_FOR_FRANKR) FrankRuehl-MediumOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/FrankRuehl-MediumOblique.afm -s FrankRuehl-MediumOblique.special -o FrankRuehl-MediumOblique-Menukad.t3
 	./CreateTest.pl FrankRuehl-MediumOblique > $(TEST_DIR)/Test-FrankRuehl-MediumOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/FrankRuehl-MediumOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v franki -T $(CULMUS_ENC_FILE) rfranki > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v franki -T $(CULMUS_ENC_FILE_FOR_FRANKR) rfranki > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
 	vptovf franki.vpl franki.vf franki.tfm
 

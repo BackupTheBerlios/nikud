@@ -7,7 +7,7 @@ afii57665 afii57807 C -50 0 ;bet dagesh
 
 afii57666 afii57807 C -50 0 ;gimel dagesh
 
-afii57667 C 100 0            ;dalet points moves 100 points to the right from center
+afii57667 C 114 0            ;dalet points moves 100 points to the right from center
 afii57667 afii57801 C 0 0 ;dalet + hatafsegol centered
 afii57667 afii57800 C 0 0 ;dalet + hatafpatah centered
 afii57667 afii57802 C 0 0 ;dalet + hatafqamats centered
@@ -31,9 +31,9 @@ afii57672 afii57807 C 0 -30 ;tet + dagesh
 afii57673 afii57807 C -40 100 ;yod  + dagesh
 
 afii57674 C -40 0 ; kaf final
-afii57674 afii57799 C 0 400 ; kaf finhal + sheva centered horizontaly and moves up 200 points
-afii57674 afii57797 C 0 350 ; kaf finhal + qamats centered horizontaly and moves up 200 points
-afii57674 afii57798 C 0 350 ; kaf finhal + patah centered horizontaly and moves up 200 points
+afii57674 afii57799 C 60 400 ; kaf finhal + sheva centered horizontaly and moves up 400 points
+afii57674 afii57797 C 0 350 ; kaf finhal + qamats centered horizontaly and moves up 350 points
+afii57674 afii57798 C 0 350 ; kaf finhal + patah centered horizontaly and moves up 350 points
 
 afii57675 C -30 0 ; kaf
 
