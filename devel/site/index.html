@@ -7,15 +7,24 @@
 </head>
 <body>
 <h1>Nikud - Hebrew Culmus fonts in LaTeX with vowel-point placing</h1>
-<h4 style="color: rgb(204, 51, 204);">2004/10/29: A new version is
-available (0.100.0):</h4>
+<h4 style="color: rgb(204, 51, 204);">2004/12/24: A new version is
+available (0.101.0):</h4>
 <ul>
   <li style="color: rgb(204, 51, 204);">Uses Culmus fonts version
+0.101.</li>
+  <li style="color: rgb(204, 51, 204);">Supports babel versions 3.7 and
+3.8 (Ivritex)<br>
+  </li>
+</ul>
+<h4>2004/10/29: A new version is
+available (0.100.0):</h4>
+<ul>
+  <li>Uses Culmus fonts version
 0.100.</li>
-  <li style="color: rgb(204, 51, 204); text-decoration: line-through;">Doesn't
+  <li style="text-decoration: line-through;">Doesn't
 conflict with
 Ivritex (I hope).</li>
-  <li style="color: rgb(204, 51, 204);">Hyphens and dashes work
+  <li>Hyphens and dashes work
 also in Nachlieli font (sans serif).</li>
 </ul>
 <h2>Project highlights</h2>
@@ -59,6 +68,17 @@ are for Hebrew cross-referencing and bibliography. See <a
 <h2>Downloading and installing</h2>
 Project page in Berlios: <a
  href="http://developer.berlios.de/projects/nikud/">http://developer.berlios.de/projects/nikud/</a><br>
+<br>
+<span style="font-weight: bold;">Important:</span> there is a
+difference between the installation process for babel 3.7 and babel 3.8
+(Ivritex). New linux distributions (e.g. Mandrake 10.1) comes with
+babel 3.8, in which the Hebrew support adapted the changes made in
+Ivritex.<br>
+To check which babel version you have, look in the file <span
+ style="font-family: monospace;">babel.def </span>(you can find where
+the file is by running <span style="font-family: monospace;">kpsewhich
+babel.def</span>) at the line beggining with <span
+ style="font-family: monospace;">%%\ProvidesFile...</span><br>
 <h4>A remark on texmf tree</h4>
 If you want to work locally (recommended), make sure you have a local
 texmf tree: edit <span style="font-family: monospace;">texmf.cnf</span>
@@ -70,7 +90,7 @@ don't have to do anything, but in 9.0 you have to make the change).<br>
 There are three option for downloading and installing the package:<br>
 <h3>The texmf tree</h3>
 <ol>
-  <li>Untar <span style="font-family: monospace;">nikud_texmf-x.y.z.tar.bz2</span>
+  <li>Untar&nbsp;<span style="font-family: monospace;">nikud_texmf_for_babel_3.x-0.101.0.tar.bz2</span>
 into your main or local texmf tree</li>
   <li>Become root (su).<br>
   </li>
@@ -90,12 +110,15 @@ To compile the fonts, the following packages must be installed: <span
  style="font-family: monospace;">tetex, afm, tetex-latex, dvips, iconv,
 perl</span>.<br>
 <ol>
-  <li>Untar <span style="font-family: monospace;">nikud_source-x.y.z.tar.bz2</span>.</li>
+  <li>Untar <span style="font-family: monospace;">nikud-0.101.0.tar.bz2</span>.</li>
   <li>Edit <span style="font-family: monospace;">Makefile </span>and
 set the variables as you like (you really don't have to change anything
 if you work locally).</li>
-  <li>Run <span style="font-family: monospace;">make</span></li>
-  <li>Run <span style="font-family: monospace;">make install</span></li>
+  <li>Run <span style="font-family: monospace;">make.</span></li>
+  <li>If&nbsp; you have babel 3.7, run <span
+ style="font-family: monospace;">make install</span>. If you have babel
+3.8, run <span style="font-family: monospace;">make install BABEL_3_8=1</span>.<br>
+  </li>
   <li>Become root (su).<br>
   </li>
   <li>Add the line:<br>
@@ -106,7 +129,11 @@ You may find where it is by running:<br>
 config" config.ps</span></li>
 </ol>
 <h3>RPM</h3>
-Just install <span style="font-family: monospace;">nikud-x.y.z-r.i586.rpm</span>.<br>
+Just install <span style="font-family: monospace;">nikud_for_babel_<span
+ style="color: rgb(204, 51, 204);">3.7</span>-0.101.0-1.noarch.rpm</span>,
+or <span style="font-family: monospace;">nikud_for_babel_<span
+ style="color: rgb(204, 51, 204);">3.8</span>-0.101.0-1.noarch.rpm</span>,
+depending on your babel version.<br>
 <br>
 <br>
 <h2>How to use</h2>
