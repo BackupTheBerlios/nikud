@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>Nikud - Hebrew Culmus fonts in LaTeX with vowel-point placing</title>
+</head>
+<body>
+<h1>Nikud - Hebrew Culmus fonts in LaTeX with vowel-point placing</h1>
+This project will provide all the files needed to use <a
+ href="culmus.sf.net">Culmus</a> fonts in Latex (elatex) with Nikud.<br>
+Vowel-points are placed using a type-3 Postscript font that wraps
+Culmus fonts. The Type-3 fonts are an implementation of a method
+publish by Sivan Toledo for Vowel-point placing.<br>
+<br>
+<br>
+<h2>Downloading and installing</h2>
+<h4>A remark on texmf tree</h4>
+If you want to work locally (recommended), make sure you have a local
+texmf tree: edit <span style="font-family: monospace;">texmf.cnf</span>
+(you may use <span style="font-family: monospace;">kpsewhich texmf.cnf</span>
+to find its location), and add <span style="font-family: monospace;">$HOMETEXMF</span>
+to the search path (in Mandrake 9.1 and 9.2 this is default so you
+don't have to do anything, but in 9.0 you have to make the change).<br>
+<br>
+There are three option for downloading and installing the package:<br>
+<h3>The texmf tree</h3>
+<ol>
+  <li>Untar <span style="font-family: monospace;">nikud_texmf.tar.bz2</span>
+into your main or local texmf tree</li>
+  <li>Become root (su).<br>
+  </li>
+  <li>Add the line:<br>
+    <span style="font-family: monospace;">p +culmus.map</span><br>
+to the file <span style="font-family: monospace;">config.ps</span>.
+You may find where it is by running:<br>
+    <span style="font-family: monospace;">kpsewhich --format="dvips
+config" config.ps</span></li>
+  <li>Run <span style="font-family: monospace;">mktexlsr</span><br
+ style="font-family: monospace; font-weight: bold;">
+  </li>
+</ol>
+<h3>Source</h3>
+To compile the fonts, you need the following packages installed: <span
+ style="font-family: monospace;">tetex, afm, tetex-latex, dvips, iconv,
+perl</span><br>
+<ol>
+  <li>Untar nikud_source.tar.bz2.</li>
+  <li>Edit <span style="font-family: monospace;">Makefile </span>and
+set the variables as you like (you really don't have to change anything
+if you work locally).</li>
+  <li>Run <span style="font-family: monospace;">make</span></li>
+  <li>Run <span style="font-family: monospace;">make install</span></li>
+  <li>Become root (su).<br>
+  </li>
+  <li>Add the line:<br>
+    <span style="font-family: monospace;">p +culmus.map</span><br>
+to the file <span style="font-family: monospace;">config.ps</span>.
+You may find where it is by running:<br>
+    <span style="font-family: monospace;">kpsewhich --format="dvips
+config" config.ps</span></li>
+</ol>
+<h3>RPM</h3>
+Soon.<br>
+<br>
+<br>
+<h2>How to use</h2>
+<h4>preparing the source file<br>
+</h4>
+You have to use the installed package <span
+ style="font-family: monospace;">culmus.sty</span>, after <span
+ style="font-family: monospace;">\documentclass... </span>like this: <span
+ style="font-family: monospace;">\usepackage{culmus}</span><br>
+<br>
+Source file should be <span style="font-style: italic;">cp1255</span>
+encoded (or <span style="font-style: italic;">ISO-8859-8</span>, if
+you don't need Nikud). You may edit your source file in Unicode (UTF-8)
+and convert it to cp1255 with <span style="font-family: monospace;">iconv</span>.<br>
+<br>
+<h4>Running latex<br>
+</h4>
+To create a postscript file, use <span style="font-family: monospace;">elatex</span>
+and <span style="font-family: monospace;">dvips</span>.<br>
+To create a pdf file run <span style="font-family: monospace;">ps2pdf </span>or
+some other distiller on your <span style="font-family: monospace;">.ps</span>
+file.<br>
+<span style="font-style: italic;">Important: Do not use pdflatex or
+dvipdf(m) if you are using Hebrew vowel-points (Nikud).</span><br
+ style="font-family: monospace;">
+<br>
+<h2>Samples</h2>
+Samples are in <span style="font-family: monospace;">texmf/doc/latex/nikud/samples</span>
+directory (see the Makefile there). The source is utf-8 encoded. You
+may use emacs-bidi as an editor.<br>
+<br>
+<br>
+This project is hosted by <a href="http://developer.berlios.de"> <img
+ src="http://developer.berlios.de/bslogo.php?group_id=1415"
+ style="border: 0px solid ; width: 124px; height: 32px;"
+ alt="BerliOS Developer Logo" title=""></a>
+<br>
+<br>
+</body>
+</html>

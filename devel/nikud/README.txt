@@ -5,13 +5,13 @@ tetex, afm, tetex-latex, dvips, iconv, perl
 
 Installation 
 ============ 
-1. If you want to work localy (recomended), make sure you have a local
+1. If you want to work locally (recommended), make sure you have a local
 texmf tree: edit "/usr/share/texmf/web2c/texmf.cnf" (you may use
 'kpsewhich texmf.cnf' to find its location), and add $HOMETEXMF to
 the search path (in Mandrake 9.1 and 9.2 this is default, but in 9.0 you have
 to make the change).
 
-2. Edit the Makefile and set the variables as you like (you realy
+2. Edit the Makefile and set the variables as you like (you really
    don't have to change anything).
 
 3. make
@@ -36,7 +36,7 @@ like this:
 
 Samples
 =======
-Samples are in local texmf/samples directory (see the Makefile
-there). 
+Samples are in local texmf/doc/latex/nikud/samples directory
+ (see the Makefile there). 
 The source is utf-8 encoded. Use emacs-bidi as an editor.
 
