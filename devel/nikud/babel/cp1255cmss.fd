@@ -8,19 +8,19 @@
 \def\CmssCulmusScale{1.00}
 \DeclareFontFamily{cp1255}{cmss}{\hyphenchar\font45}
 \DeclareFontShape{cp1255}{cmss}{m}{n}
-      {<-> [\CmssCulmusScale] nachlieli }{}
+      {<-> [\CmssCulmusScale] nachlieliClmNkd }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{cmss}{m}{sc}
   {<->ssub * cmss/m/n}{}
 %%%%%%% Italicized shape
 \DeclareFontShape{cp1255}{cmss}{m}{it}
-      {<-> [\CmssCulmusScale] nachlielii }{}
+      {<-> [\CmssCulmusScale] nachlieliClmNkdi }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{cmss}{m}{sl}
   {<->ssub * cmss/m/it}{}
 %%%%%%% Bold extended series
 \DeclareFontShape{cp1255}{cmss}{bx}{n}
-      {<-> [\CmssCulmusScale] nachlielib }{}
+      {<-> [\CmssCulmusScale] nachlieliClmNkdb }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{cmss}{b}{n}
   {<->ssub * cmss/bx/n}{}
@@ -32,7 +32,7 @@
   {<->ssub * cmss/bx/n}{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{cmss}{bx}{it}
-  {<-> [\CmssCulmusScale] nachlielibi }{}
+  {<-> [\CmssCulmusScale] nachlieliClmNkdbi }{}
 %%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z

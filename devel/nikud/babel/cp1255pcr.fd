@@ -8,19 +8,19 @@
 \def\PcrCulmusScale{0.92}
 \DeclareFontFamily{cp1255}{pcr}{\hyphenchar\font45}
 \DeclareFontShape{cp1255}{pcr}{m}{n}
-      {<-> [\PcrCulmusScale] miriam }{}
+      {<-> [\PcrCulmusScale] miriamClmNkd }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{pcr}{m}{sc}
   {<->ssub * pcr/m/n}{}
 %%%%%%% Italicized shape
 \DeclareFontShape{cp1255}{pcr}{m}{it}
-      {<-> [\PcrCulmusScale] miriami }{}
+      {<-> [\PcrCulmusScale] miriamClmNkdi }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{pcr}{m}{sl}
   {<->ssub * pcr/m/it}{}
 %%%%%%% Bold extended series
 \DeclareFontShape{cp1255}{pcr}{bx}{n}
-      {<-> [\PcrCulmusScale] miriamb }{}
+      {<-> [\PcrCulmusScale] miriamClmNkdb }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{pcr}{b}{n}
   {<->ssub * pcr/bx/n}{}
@@ -32,7 +32,7 @@
   {<->ssub * pcr/bx/n}{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{pcr}{bx}{it}
-  {<-> [\PcrCulmusScale] miriambi }{}
+  {<-> [\PcrCulmusScale] miriamClmNkdbi }{}
 %%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z

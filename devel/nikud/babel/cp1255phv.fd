@@ -8,19 +8,19 @@
 \def\PhvCulmusScale{1.00}
 \DeclareFontFamily{cp1255}{phv}{\hyphenchar\font45}
 \DeclareFontShape{cp1255}{phv}{m}{n}
-      {<-> [\PhvCulmusScale] nachlieli }{}
+      {<-> [\PhvCulmusScale] nachlieliClmNkd }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{phv}{m}{sc}
   {<->ssub * phv/m/n}{}
 %%%%%%% Italicized shape
 \DeclareFontShape{cp1255}{phv}{m}{it}
-      {<-> [\PhvCulmusScale] nachlielii }{}
+      {<-> [\PhvCulmusScale] nachlieliClmNkdi }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{phv}{m}{sl}
   {<->ssub * phv/m/it}{}
 %%%%%%% Bold extended series
 \DeclareFontShape{cp1255}{phv}{bx}{n}
-      {<-> [\PhvCulmusScale] nachlielib }{}
+      {<-> [\PhvCulmusScale] nachlieliClmNkdb }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{phv}{b}{n}
   {<->ssub * phv/bx/n}{}
@@ -32,7 +32,7 @@
   {<->ssub * phv/bx/n}{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{phv}{bx}{it}
-  {<-> [\PhvCulmusScale] nachlielibi }{}
+  {<-> [\PhvCulmusScale] nachlieliClmNkdbi }{}
 %%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z

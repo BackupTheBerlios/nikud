@@ -16,11 +16,11 @@ RM = rm -fr
 CP = cp -f
 MKDIR = mkdir -p
 
-all: 	frank.vf frankb.vf frankbi.vf franki.vf \
-	miriamb.vf miriambi.vf miriam.vf miriami.vf \
-	nachlielib.vf nachlielibi.vf nachlieli.vf nachlielii.vf \
-	elliniab.vf elliniabi.vf ellinia.vf elliniai.vf \
-	yehudab.vf yehuda.vf
+all: 	frankClmNkd.vf frankClmNkdb.vf frankClmNkdbi.vf frankClmNkdi.vf \
+	miriamClmNkdb.vf miriamClmNkdbi.vf miriamClmNkd.vf miriamClmNkdi.vf \
+	nachlieliClmNkdb.vf nachlieliClmNkdbi.vf nachlieliClmNkd.vf nachlieliClmNkdi.vf \
+	elliniaClmNkdb.vf elliniaClmNkdbi.vf elliniaClmNkd.vf elliniaClmNkdi.vf \
+	yehudaClmNkdb.vf yehudaClmNkd.vf
 
 clean:
 	$(RM) *.vf *.tfm *.vpl *.map *~ 
@@ -31,13 +31,13 @@ clean:
 	make -C samples/poem clean
 
 uninstall:
-	$(RM) "$(TEXFONTSDIR)/tfm/hebrew/"
-	$(RM) "$(TEXFONTSDIR)/vf/hebrew/"
+	$(RM) "$(TEXFONTSDIR)/tfm/hebrew/culmus/nikud/"
+	$(RM) "$(TEXFONTSDIR)/vf/hebrew/culmus/nikud/"
 	$(RM) "$(DVIPSBASEDIR)/$(CULMUS_ENC_FILE)"
 	$(RM) "$(DVIPSBASEDIR)/$(CULMUS_ENC_FILE_WITH_DASHES)"
 	$(RM) "$(DVIPSBASEDIR)/$(CULMUS_DVIPS_MAP_FILE)"
-	$(RM) "$(TEXFONTSDIR)/afm/hebrew/"
-	$(RM) "$(TEXFONTSDIR)/type1/hebrew/"
+	$(RM) "$(TEXFONTSDIR)/afm/hebrew/culmus/nikud/"
+	$(RM) "$(TEXFONTSDIR)/type1/hebrew/culmus/nikud/"
 	$(RM) $(LOCAL_BABEL_DIR)
 	$(RM) "$(TEXMFDIR)/bibtex/bst/chicagoi.bst"
 	$(RM) "$(TEXMFDIR)/bibtex/bst/chicagoiheb.bst"
@@ -48,19 +48,19 @@ uninstall:
 
 
 install:
-	$(MKDIR) "$(TEXFONTSDIR)/tfm/hebrew/"
-	$(CP) *.tfm "$(TEXFONTSDIR)/tfm/hebrew/"
-	$(MKDIR) "$(TEXFONTSDIR)/vf/hebrew/"
-	$(CP) *.vf "$(TEXFONTSDIR)/vf/hebrew/"
+	$(MKDIR) "$(TEXFONTSDIR)/tfm/hebrew/culmus/nikud/"
+	$(CP) *.tfm "$(TEXFONTSDIR)/tfm/hebrew/culmus/nikud/"
+	$(MKDIR) "$(TEXFONTSDIR)/vf/hebrew/culmus/nikud/"
+	$(CP) *.vf "$(TEXFONTSDIR)/vf/hebrew/culmus/nikud/"
 	$(MKDIR) "$(DVIPSBASEDIR)/"
 	$(CP) $(CULMUS_ENC_FILE) "$(DVIPSBASEDIR)/"
 	$(CP) $(CULMUS_ENC_FILE_WITH_DASHES) "$(DVIPSBASEDIR)/"
 	$(CP) $(CULMUS_DVIPS_MAP_FILE) "$(DVIPSBASEDIR)/"
-	$(MKDIR) "$(TEXFONTSDIR)/afm/hebrew/"
-	$(CP) $(CULMUS_DIR)/*.afm "$(TEXFONTSDIR)/afm/hebrew/"
-	$(MKDIR) "$(TEXFONTSDIR)/type1/hebrew/"
-	$(CP) $(CULMUS_DIR)/*.pfa "$(TEXFONTSDIR)/type1/hebrew/"
-	$(CP) *.t3 "$(TEXFONTSDIR)/type1/hebrew/"
+	$(MKDIR) "$(TEXFONTSDIR)/afm/hebrew/culmus/nikud/"
+	$(CP) $(CULMUS_DIR)/*.afm "$(TEXFONTSDIR)/afm/hebrew/culmus/nikud/"
+	$(MKDIR) "$(TEXFONTSDIR)/type1/hebrew/culmus/nikud/"
+	$(CP) $(CULMUS_DIR)/*.pfa "$(TEXFONTSDIR)/type1/hebrew/culmus/nikud/"
+	$(CP) *.t3 "$(TEXFONTSDIR)/type1/hebrew/culmus/nikud/"
 	$(MKDIR) $(LOCAL_BABEL_DIR)
 	$(CP) babel/*fd babel/*def babel/*.sty $(LOCAL_BABEL_DIR)
 	$(CP) -r bibtex_stuff/bibtex $(TEXMFDIR)
@@ -73,146 +73,146 @@ install:
 	mktexlsr
 
 
-frank.vf: $(CULMUS_DIR)/FrankRuehlCLM-Medium.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-Medium.special
+frankClmNkd.vf: $(CULMUS_DIR)/FrankRuehlCLM-Medium.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-Medium.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/FrankRuehlCLM-Medium.afm -s FrankRuehlCLM-Medium.special -o FrankRuehlCLM-Medium-Menukad.t3
 	./CreateTest.pl FrankRuehlCLM-Medium > $(TEST_DIR)/Test-FrankRuehlCLM-Medium-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/FrankRuehlCLM-Medium.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v frank -T $(CULMUS_ENC_FILE_WITH_DASHES) rfrank > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v frankClmNkd -T $(CULMUS_ENC_FILE_WITH_DASHES) rfrankClmNkd > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf frank.vpl frank.vf frank.tfm
+	vptovf frankClmNkd.vpl frankClmNkd.vf frankClmNkd.tfm
 
-frankb.vf: $(CULMUS_DIR)/FrankRuehlCLM-Bold.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-Bold.special
+frankClmNkdb.vf: $(CULMUS_DIR)/FrankRuehlCLM-Bold.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-Bold.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/FrankRuehlCLM-Bold.afm -s FrankRuehlCLM-Bold.special -o FrankRuehlCLM-Bold-Menukad.t3
 	./CreateTest.pl FrankRuehlCLM-Bold > $(TEST_DIR)/Test-FrankRuehlCLM-Bold-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/FrankRuehlCLM-Bold.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v frankb -T $(CULMUS_ENC_FILE_WITH_DASHES) rfrankb > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v frankClmNkdb -T $(CULMUS_ENC_FILE_WITH_DASHES) rfrankClmNkdb > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf frankb.vpl frankb.vf frankb.tfm
+	vptovf frankClmNkdb.vpl frankClmNkdb.vf frankClmNkdb.tfm
 
-frankbi.vf: $(CULMUS_DIR)/FrankRuehlCLM-BoldOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-BoldOblique.special
+frankClmNkdbi.vf: $(CULMUS_DIR)/FrankRuehlCLM-BoldOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-BoldOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/FrankRuehlCLM-BoldOblique.afm -s FrankRuehlCLM-BoldOblique.special -o FrankRuehlCLM-BoldOblique-Menukad.t3
 	./CreateTest.pl FrankRuehlCLM-BoldOblique > $(TEST_DIR)/Test-FrankRuehlCLM-BoldOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/FrankRuehlCLM-BoldOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v frankbi -T $(CULMUS_ENC_FILE_WITH_DASHES) rfrankbi > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v frankClmNkdbi -T $(CULMUS_ENC_FILE_WITH_DASHES) rfrankClmNkdbi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf frankbi.vpl frankbi.vf frankbi.tfm
+	vptovf frankClmNkdbi.vpl frankClmNkdbi.vf frankClmNkdbi.tfm
 
-franki.vf: $(CULMUS_DIR)/FrankRuehlCLM-MediumOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-MediumOblique.special
+frankClmNkdi.vf: $(CULMUS_DIR)/FrankRuehlCLM-MediumOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-MediumOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/FrankRuehlCLM-MediumOblique.afm -s FrankRuehlCLM-MediumOblique.special -o FrankRuehlCLM-MediumOblique-Menukad.t3
 	./CreateTest.pl FrankRuehlCLM-MediumOblique > $(TEST_DIR)/Test-FrankRuehlCLM-MediumOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/FrankRuehlCLM-MediumOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v franki -T $(CULMUS_ENC_FILE_WITH_DASHES) rfranki > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v frankClmNkdi -T $(CULMUS_ENC_FILE_WITH_DASHES) rfrankClmNkdi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf franki.vpl franki.vf franki.tfm
+	vptovf frankClmNkdi.vpl frankClmNkdi.vf frankClmNkdi.tfm
 
-miriamb.vf: $(CULMUS_DIR)/MiriamMonoCLM-Bold.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-Bold.special
+miriamClmNkdb.vf: $(CULMUS_DIR)/MiriamMonoCLM-Bold.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-Bold.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/MiriamMonoCLM-Bold.afm -s MiriamMonoCLM-Bold.special -o MiriamMonoCLM-Bold-Menukad.t3
 	./CreateTest.pl MiriamMonoCLM-Bold > $(TEST_DIR)/Test-MiriamMonoCLM-Bold-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/MiriamMonoCLM-Bold.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v miriamb -T $(CULMUS_ENC_FILE) rmiriamb > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdb -T $(CULMUS_ENC_FILE) rmiriamClmNkdb > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf miriamb.vpl miriamb.vf miriamb.tfm
+	vptovf miriamClmNkdb.vpl miriamClmNkdb.vf miriamClmNkdb.tfm
 
-miriambi.vf: $(CULMUS_DIR)/MiriamMonoCLM-BoldOblique.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-BoldOblique.special
+miriamClmNkdbi.vf: $(CULMUS_DIR)/MiriamMonoCLM-BoldOblique.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-BoldOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/MiriamMonoCLM-BoldOblique.afm -s MiriamMonoCLM-BoldOblique.special -o MiriamMonoCLM-BoldOblique-Menukad.t3
 	./CreateTest.pl MiriamMonoCLM-BoldOblique > $(TEST_DIR)/Test-MiriamMonoCLM-BoldOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/MiriamMonoCLM-BoldOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v miriambi -T $(CULMUS_ENC_FILE) rmiriambi > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdbi -T $(CULMUS_ENC_FILE) rmiriamClmNkdbi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf miriambi.vpl miriambi.vf miriambi.tfm
+	vptovf miriamClmNkdbi.vpl miriamClmNkdbi.vf miriamClmNkdbi.tfm
 
-miriam.vf: $(CULMUS_DIR)/MiriamMonoCLM-Book.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-Book.special
+miriamClmNkd.vf: $(CULMUS_DIR)/MiriamMonoCLM-Book.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-Book.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/MiriamMonoCLM-Book.afm -s MiriamMonoCLM-Book.special -o MiriamMonoCLM-Book-Menukad.t3
 	./CreateTest.pl MiriamMonoCLM-Book > $(TEST_DIR)/Test-MiriamMonoCLM-Book-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/MiriamMonoCLM-Book.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v miriam -T $(CULMUS_ENC_FILE) rmiriam > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkd -T $(CULMUS_ENC_FILE) rmiriamClmNkd > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf miriam.vpl miriam.vf miriam.tfm
+	vptovf miriamClmNkd.vpl miriamClmNkd.vf miriamClmNkd.tfm
 
-miriami.vf: $(CULMUS_DIR)/MiriamMonoCLM-BookOblique.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-BookOblique.special
+miriamClmNkdi.vf: $(CULMUS_DIR)/MiriamMonoCLM-BookOblique.afm $(CULMUS_ENC_FILE) MiriamMonoCLM-BookOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/MiriamMonoCLM-BookOblique.afm -s MiriamMonoCLM-BookOblique.special -o MiriamMonoCLM-BookOblique-Menukad.t3
 	./CreateTest.pl MiriamMonoCLM-BookOblique > $(TEST_DIR)/Test-MiriamMonoCLM-BookOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/MiriamMonoCLM-BookOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v miriami -T $(CULMUS_ENC_FILE) rmiriami > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v miriamClmNkdi -T $(CULMUS_ENC_FILE) rmiriamClmNkdi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf miriami.vpl miriami.vf miriami.tfm
+	vptovf miriamClmNkdi.vpl miriamClmNkdi.vf miriamClmNkdi.tfm
 
-nachlielib.vf: $(CULMUS_DIR)/NachlieliCLM-Bold.afm $(CULMUS_ENC_FILE_WITH_DASHES) NachlieliCLM-Bold.special
+nachlieliClmNkdb.vf: $(CULMUS_DIR)/NachlieliCLM-Bold.afm $(CULMUS_ENC_FILE_WITH_DASHES) NachlieliCLM-Bold.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/NachlieliCLM-Bold.afm -s NachlieliCLM-Bold.special -o NachlieliCLM-Bold-Menukad.t3
 	./CreateTest.pl NachlieliCLM-Bold > $(TEST_DIR)/Test-NachlieliCLM-Bold-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/NachlieliCLM-Bold.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v nachlielib -T $(CULMUS_ENC_FILE_WITH_DASHES) rnachlielib > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v nachlieliClmNkdb -T $(CULMUS_ENC_FILE_WITH_DASHES) rnachlieliClmNkdb > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf nachlielib.vpl nachlielib.vf nachlielib.tfm
+	vptovf nachlieliClmNkdb.vpl nachlieliClmNkdb.vf nachlieliClmNkdb.tfm
 
-nachlielibi.vf: $(CULMUS_DIR)/NachlieliCLM-BoldOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) NachlieliCLM-BoldOblique.special
+nachlieliClmNkdbi.vf: $(CULMUS_DIR)/NachlieliCLM-BoldOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) NachlieliCLM-BoldOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/NachlieliCLM-BoldOblique.afm -s NachlieliCLM-BoldOblique.special -o NachlieliCLM-BoldOblique-Menukad.t3
 	./CreateTest.pl NachlieliCLM-BoldOblique > $(TEST_DIR)/Test-NachlieliCLM-BoldOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/NachlieliCLM-BoldOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v nachlielibi -T $(CULMUS_ENC_FILE_WITH_DASHES) rnachlielibi > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v nachlieliClmNkdbi -T $(CULMUS_ENC_FILE_WITH_DASHES) rnachlieliClmNkdbi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf nachlielibi.vpl nachlielibi.vf nachlielibi.tfm
+	vptovf nachlieliClmNkdbi.vpl nachlieliClmNkdbi.vf nachlieliClmNkdbi.tfm
 
-nachlieli.vf: $(CULMUS_DIR)/NachlieliCLM-Light.afm $(CULMUS_ENC_FILE_WITH_DASHES) NachlieliCLM-Light.special
+nachlieliClmNkd.vf: $(CULMUS_DIR)/NachlieliCLM-Light.afm $(CULMUS_ENC_FILE_WITH_DASHES) NachlieliCLM-Light.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/NachlieliCLM-Light.afm -s NachlieliCLM-Light.special -o NachlieliCLM-Light-Menukad.t3
 	./CreateTest.pl NachlieliCLM-Light > $(TEST_DIR)/Test-NachlieliCLM-Light-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/NachlieliCLM-Light.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v nachlieli -T $(CULMUS_ENC_FILE_WITH_DASHES) rnachlieli > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v nachlieliClmNkd -T $(CULMUS_ENC_FILE_WITH_DASHES) rnachlieliClmNkd > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf nachlieli.vpl nachlieli.vf nachlieli.tfm
+	vptovf nachlieliClmNkd.vpl nachlieliClmNkd.vf nachlieliClmNkd.tfm
 
-nachlielii.vf: $(CULMUS_DIR)/NachlieliCLM-LightOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) NachlieliCLM-LightOblique.special
+nachlieliClmNkdi.vf: $(CULMUS_DIR)/NachlieliCLM-LightOblique.afm $(CULMUS_ENC_FILE_WITH_DASHES) NachlieliCLM-LightOblique.special
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/NachlieliCLM-LightOblique.afm -s NachlieliCLM-LightOblique.special -o NachlieliCLM-LightOblique-Menukad.t3
 	./CreateTest.pl NachlieliCLM-LightOblique > $(TEST_DIR)/Test-NachlieliCLM-LightOblique-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/NachlieliCLM-LightOblique.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v nachlielii -T $(CULMUS_ENC_FILE_WITH_DASHES) rnachlielii > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v nachlieliClmNkdi -T $(CULMUS_ENC_FILE_WITH_DASHES) rnachlieliClmNkdi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf nachlielii.vpl nachlielii.vf nachlielii.tfm
+	vptovf nachlieliClmNkdi.vpl nachlieliClmNkdi.vf nachlieliClmNkdi.tfm
 
-elliniab.vf: $(CULMUS_DIR)/ElliniaCLM-Bold.afm $(CULMUS_ENC_FILE)
+elliniaClmNkdb.vf: $(CULMUS_DIR)/ElliniaCLM-Bold.afm $(CULMUS_ENC_FILE)
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/ElliniaCLM-Bold.afm -o ElliniaCLM-Bold-Menukad.t3
 	./CreateTest.pl ElliniaCLM-Bold > $(TEST_DIR)/Test-ElliniaCLM-Bold-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/ElliniaCLM-Bold.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v elliniab -T $(CULMUS_ENC_FILE) relliniab > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v elliniaClmNkdb -T $(CULMUS_ENC_FILE) relliniaClmNkdb > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf elliniab.vpl elliniab.vf elliniab.tfm
+	vptovf elliniaClmNkdb.vpl elliniaClmNkdb.vf elliniaClmNkdb.tfm
 
-elliniabi.vf: $(CULMUS_DIR)/ElliniaCLM-BoldItalic.afm $(CULMUS_ENC_FILE)
+elliniaClmNkdbi.vf: $(CULMUS_DIR)/ElliniaCLM-BoldItalic.afm $(CULMUS_ENC_FILE)
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/ElliniaCLM-BoldItalic.afm  -o ElliniaCLM-BoldItalic-Menukad.t3
 	./CreateTest.pl ElliniaCLM-BoldItalic > $(TEST_DIR)/Test-ElliniaCLM-BoldItalic-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/ElliniaCLM-BoldItalic.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v elliniabi -T $(CULMUS_ENC_FILE) relliniabi > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v elliniaClmNkdbi -T $(CULMUS_ENC_FILE) relliniaClmNkdbi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf elliniabi.vpl elliniabi.vf elliniabi.tfm
+	vptovf elliniaClmNkdbi.vpl elliniaClmNkdbi.vf elliniaClmNkdbi.tfm
 
-ellinia.vf: $(CULMUS_DIR)/ElliniaCLM-Light.afm $(CULMUS_ENC_FILE)
+elliniaClmNkd.vf: $(CULMUS_DIR)/ElliniaCLM-Light.afm $(CULMUS_ENC_FILE)
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/ElliniaCLM-Light.afm  -o ElliniaCLM-Light-Menukad.t3
 	./CreateTest.pl ElliniaCLM-Light > $(TEST_DIR)/Test-ElliniaCLM-Light-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/ElliniaCLM-Light.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v ellinia -T $(CULMUS_ENC_FILE) rellinia > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v elliniaClmNkd -T $(CULMUS_ENC_FILE) relliniaClmNkd > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf ellinia.vpl ellinia.vf ellinia.tfm
+	vptovf elliniaClmNkd.vpl elliniaClmNkd.vf elliniaClmNkd.tfm
 
-elliniai.vf: $(CULMUS_DIR)/ElliniaCLM-LightItalic.afm $(CULMUS_ENC_FILE)
+elliniaClmNkdi.vf: $(CULMUS_DIR)/ElliniaCLM-LightItalic.afm $(CULMUS_ENC_FILE)
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/ElliniaCLM-LightItalic.afm  -o ElliniaCLM-LightItalic-Menukad.t3
 	./CreateTest.pl ElliniaCLM-LightItalic > $(TEST_DIR)/Test-ElliniaCLM-LightItalic-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/ElliniaCLM-LightItalic.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v elliniai -T $(CULMUS_ENC_FILE) relliniai > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v elliniaClmNkdi -T $(CULMUS_ENC_FILE) relliniaClmNkdi > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf elliniai.vpl elliniai.vf elliniai.tfm
+	vptovf elliniaClmNkdi.vpl elliniaClmNkdi.vf elliniaClmNkdi.tfm
 
-yehudab.vf: $(CULMUS_DIR)/YehudaCLM-Bold.afm $(CULMUS_ENC_FILE)
+yehudaClmNkdb.vf: $(CULMUS_DIR)/YehudaCLM-Bold.afm $(CULMUS_ENC_FILE)
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/YehudaCLM-Bold.afm  -o YehudaCLM-Bold-Menukad.t3
 	./CreateTest.pl YehudaCLM-Bold > $(TEST_DIR)/Test-YehudaCLM-Bold-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/YehudaCLM-Bold.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v yehudab -T $(CULMUS_ENC_FILE) ryehudab > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v yehudaClmNkdb -T $(CULMUS_ENC_FILE) ryehudaClmNkdb > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf yehudab.vpl yehudab.vf yehudab.tfm
+	vptovf yehudaClmNkdb.vpl yehudaClmNkdb.vf yehudaClmNkdb.tfm
 
-yehuda.vf: $(CULMUS_DIR)/YehudaCLM-Light.afm $(CULMUS_ENC_FILE)
+yehudaClmNkd.vf: $(CULMUS_DIR)/YehudaCLM-Light.afm $(CULMUS_ENC_FILE)
 	./culmusafm2t3menukad.pl $(CULMUS_DIR)/YehudaCLM-Light.afm  -o YehudaCLM-Light-Menukad.t3
 	./CreateTest.pl YehudaCLM-Light > $(TEST_DIR)/Test-YehudaCLM-Light-Menukad.ps
 	./zero_nikud_width.pl $(CULMUS_DIR)/YehudaCLM-Light.afm $(AFM_TEMP_FILE)
-	afm2tfm $(AFM_TEMP_FILE) -v yehuda -T $(CULMUS_ENC_FILE) ryehuda > $(TMP_FILE)
+	afm2tfm $(AFM_TEMP_FILE) -v yehudaClmNkd -T $(CULMUS_ENC_FILE) ryehudaClmNkd > $(TMP_FILE)
 	./append_to_mapfile.pl $(TMP_FILE) $(CULMUS_DVIPS_MAP_FILE)
-	vptovf yehuda.vpl yehuda.vf yehuda.tfm
+	vptovf yehudaClmNkd.vpl yehudaClmNkd.vf yehudaClmNkd.tfm

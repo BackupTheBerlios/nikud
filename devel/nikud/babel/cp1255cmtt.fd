@@ -8,19 +8,19 @@
 \def\CmttCulmusScale{0.92}
 \DeclareFontFamily{cp1255}{cmtt}{\hyphenchar\font45}
 \DeclareFontShape{cp1255}{cmtt}{m}{n}
-      {<-> [\CmttCulmusScale] miriam }{}
+      {<-> [\CmttCulmusScale] miriamClmNkd }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{cmtt}{m}{sc}
   {<->ssub * cmtt/m/n}{}
 %%%%%%% Italicized shape
 \DeclareFontShape{cp1255}{cmtt}{m}{it}
-      {<-> [\CmttCulmusScale] miriami }{}
+      {<-> [\CmttCulmusScale] miriamClmNkdi }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{cmtt}{m}{sl}
   {<->ssub * cmtt/m/it}{}
 %%%%%%% Bold extended series
 \DeclareFontShape{cp1255}{cmtt}{bx}{n}
-      {<-> [\CmttCulmusScale] miriamb }{}
+      {<-> [\CmttCulmusScale] miriamClmNkdb }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{cmtt}{b}{n}
   {<->ssub * cmtt/bx/n}{}
@@ -32,7 +32,7 @@
   {<->ssub * cmtt/bx/n}{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{cmtt}{bx}{it}
-  {<-> [\CmttCulmusScale] miriambi }{}
+  {<-> [\CmttCulmusScale] miriamClmNkdbi }{}
 %%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z

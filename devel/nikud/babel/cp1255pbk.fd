@@ -8,19 +8,19 @@
 \def\PbkCulmusScale{1.20}
 \DeclareFontFamily{cp1255}{pbk}{\hyphenchar\font45}
 \DeclareFontShape{cp1255}{pbk}{m}{n}
-      {<-> [\PbkCulmusScale] frank }{}
+      {<-> [\PbkCulmusScale] frankClmNkd }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{pbk}{m}{sc}
   {<->ssub * pbk/m/n}{}
 %%%%%%% Italicized shape
 \DeclareFontShape{cp1255}{pbk}{m}{it}
-      {<-> [\PbkCulmusScale] franki }{}
+      {<-> [\PbkCulmusScale] frankClmNkdi }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{pbk}{m}{sl}
   {<->ssub * pbk/m/it}{}
 %%%%%%% Bold extended series
 \DeclareFontShape{cp1255}{pbk}{bx}{n}
-      {<-> [\PbkCulmusScale] frankb }{}
+      {<-> [\PbkCulmusScale] frankClmNkdb }{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{pbk}{b}{n}
   {<->ssub * pbk/bx/n}{}
@@ -32,7 +32,7 @@
   {<->ssub * pbk/bx/n}{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{cp1255}{pbk}{bx}{it}
-  {<-> [\PbkCulmusScale] frankbi }{}
+  {<-> [\PbkCulmusScale] frankClmNkdbi }{}
 %%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
