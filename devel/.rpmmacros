@@ -1,0 +1,14 @@
+%packager	Itai Levi
+%distribution	Itai Levi
+%vendor		Itai Levi
+
+%_topdir	%(echo $HOME)/rpms
+%_tmppath	%{_topdir}/tmp
+%_builddir	%{_tmppath}
+
+%_rpmtopdir	%{_topdir}/%{name}
+%_sourcedir	%{_rpmtopdir}
+%_specdir	%{_rpmtopdir}
+%_rpmdir	%{_topdir}/RPMS
+%_srcrpmdir	%{_topdir}/RPMS
+%_rpmfilename	%%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm

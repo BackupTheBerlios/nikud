@@ -8,7 +8,9 @@
 - done: also change font directory in fonts
 - build rpm - write a script that uses rpm and not 'crust'
 - put instructions from the paper in a file an dadd it to the cvs
-
+- change long example
+- add nachlieli to short example
+- patch version into spec file
 
 
 

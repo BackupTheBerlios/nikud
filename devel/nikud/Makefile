@@ -1,4 +1,6 @@
-TEXMFDIR = $(HOME)/texmf
+DESTDIR = $(HOME)/texmf
+MKTEXLSR = mktexlsr
+TEXMFDIR = $(DESTDIR)
 #TEXMFDIR = /usr/share/texmf
 TEXFONTSDIR = $(TEXMFDIR)/fonts
 DVIPSBASEDIR = $(TEXMFDIR)/dvips/base
@@ -44,7 +46,7 @@ uninstall:
 	$(RM) "$(TEXMFDIR)/tex/biblio"
 	$(RM) "$(TEXMFDIR)/tex/latex/tools/variorefh.sty"
 	$(RM) "$(TEXMFDIR)/doc/latex/nikud"
-	mktexlsr
+	$(MKTEXLSR)
 
 
 install:
@@ -70,7 +72,7 @@ install:
 	$(CP) -r tools/*.sty "$(TEXMFDIR)/tex/latex/tools"
 	$(MKDIR) "$(SAMPLES_DIR)"
 	$(CP) -r samples/* "$(SAMPLES_DIR)"
-	mktexlsr
+	$(MKTEXLSR)
 
 
 frankClmNkd.vf: $(CULMUS_DIR)/FrankRuehlCLM-Medium.afm $(CULMUS_ENC_FILE_WITH_DASHES) FrankRuehlCLM-Medium.special

@@ -1,0 +1,197 @@
+%define name nikud
+%define release 1
+
+Summary: Hebrew Culmus fonts in LaTeX with Nikud
+Name: %{name}
+Version: %{version}
+Release: %{release}
+Copyright: GNU GPL
+Group: Publishing
+Source: http://download.berlios.de/nikud/nikud-%{version}.tar.bz2
+URL: http://nikud.berlios.de/
+Distribution: Linux
+Vendor: Itai Levi
+Packager: Itai Levi
+BuildRoot: %{_builddir}/%{name}-buildroot
+# Prefix: %{_prefix}
+
+%description
+Use Hebrew Culmus fonts in LaTeX with Hebrew vowel-points
+
+%prep
+%setup -q
+
+%build
+make
+
+%install
+make install DESTDIR=$RPM_BUILD_ROOT/usr/share/texmf MKTEXLSR=
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/elliniaClmNkdbi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/elliniaClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/elliniaClmNkdi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/elliniaClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/frankClmNkdbi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/frankClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/frankClmNkdi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/frankClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/miriamClmNkdbi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/miriamClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/miriamClmNkdi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/miriamClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/nachlieliClmNkdbi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/nachlieliClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/nachlieliClmNkdi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/nachlieliClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/relliniaClmNkdbi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/relliniaClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/relliniaClmNkdi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/relliniaClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rfrankClmNkdbi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rfrankClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rfrankClmNkdi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rfrankClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rmiriamClmNkdbi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rmiriamClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rmiriamClmNkdi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rmiriamClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rnachlieliClmNkdbi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rnachlieliClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rnachlieliClmNkdi.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/rnachlieliClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/ryehudaClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/ryehudaClmNkd.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/yehudaClmNkdb.tfm
+/usr/share/texmf/fonts/tfm/hebrew/culmus/nikud/yehudaClmNkd.tfm
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/elliniaClmNkdbi.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/elliniaClmNkdb.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/elliniaClmNkdi.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/elliniaClmNkd.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/frankClmNkdbi.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/frankClmNkdb.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/frankClmNkdi.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/frankClmNkd.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/miriamClmNkdbi.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/miriamClmNkdb.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/miriamClmNkdi.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/miriamClmNkd.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/nachlieliClmNkdbi.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/nachlieliClmNkdb.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/nachlieliClmNkdi.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/nachlieliClmNkd.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/yehudaClmNkdb.vf
+/usr/share/texmf/fonts/vf/hebrew/culmus/nikud/yehudaClmNkd.vf
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/ElliniaCLM-Bold.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/ElliniaCLM-BoldItalic.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/ElliniaCLM-Light.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/ElliniaCLM-LightItalic.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/FrankRuehlCLM-Bold.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/FrankRuehlCLM-BoldOblique.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/FrankRuehlCLM-Medium.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/FrankRuehlCLM-MediumOblique.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/MiriamMonoCLM-Bold.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/MiriamMonoCLM-BoldOblique.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/MiriamMonoCLM-Book.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/MiriamMonoCLM-BookOblique.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/NachlieliCLM-Bold.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/NachlieliCLM-BoldOblique.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/NachlieliCLM-Light.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/NachlieliCLM-LightOblique.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/YehudaCLM-Bold.afm
+/usr/share/texmf/fonts/afm/hebrew/culmus/nikud/YehudaCLM-Light.afm
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/ElliniaCLM-BoldItalic.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/ElliniaCLM-Bold.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/ElliniaCLM-LightItalic.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/ElliniaCLM-Light.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/FrankRuehlCLM-BoldOblique.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/FrankRuehlCLM-Bold.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/FrankRuehlCLM-MediumOblique.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/FrankRuehlCLM-Medium.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/MiriamMonoCLM-BoldOblique.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/MiriamMonoCLM-Bold.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/MiriamMonoCLM-BookOblique.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/MiriamMonoCLM-Book.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/NachlieliCLM-BoldOblique.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/NachlieliCLM-Bold.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/NachlieliCLM-LightOblique.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/NachlieliCLM-Light.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/YehudaCLM-Bold.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/YehudaCLM-Light.pfa
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/ElliniaCLM-BoldItalic-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/ElliniaCLM-Bold-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/ElliniaCLM-LightItalic-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/ElliniaCLM-Light-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/FrankRuehlCLM-Bold-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/FrankRuehlCLM-BoldOblique-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/FrankRuehlCLM-Medium-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/FrankRuehlCLM-MediumOblique-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/MiriamMonoCLM-Bold-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/MiriamMonoCLM-BoldOblique-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/MiriamMonoCLM-Book-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/MiriamMonoCLM-BookOblique-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/NachlieliCLM-Bold-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/NachlieliCLM-BoldOblique-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/NachlieliCLM-Light-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/NachlieliCLM-LightOblique-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/YehudaCLM-Bold-Menukad.t3
+/usr/share/texmf/fonts/type1/hebrew/culmus/nikud/YehudaCLM-Light-Menukad.t3
+/usr/share/texmf/dvips/base/myculmus.enc
+/usr/share/texmf/dvips/base/myculmus_with_dashes.enc
+/usr/share/texmf/dvips/base/culmus.map
+/usr/share/texmf/tex/hebrew/cp1255cmr.fd
+/usr/share/texmf/tex/hebrew/cp1255cmss.fd
+/usr/share/texmf/tex/hebrew/cp1255cmtt.fd
+/usr/share/texmf/tex/hebrew/cp1255pag.fd
+/usr/share/texmf/tex/hebrew/cp1255pbk.fd
+/usr/share/texmf/tex/hebrew/cp1255pcr.fd
+/usr/share/texmf/tex/hebrew/cp1255phv.fd
+/usr/share/texmf/tex/hebrew/cp1255pnc.fd
+/usr/share/texmf/tex/hebrew/cp1255ppl.fd
+/usr/share/texmf/tex/hebrew/cp1255ptm.fd
+/usr/share/texmf/tex/hebrew/cp1255.def
+/usr/share/texmf/tex/hebrew/cp1255enc.def
+/usr/share/texmf/tex/hebrew/culmus.sty
+/usr/share/texmf/tex/biblio/multibibheb.sty
+/usr/share/texmf/tex/biblio/multibib.sty
+/usr/share/texmf/tex/biblio/natbibheb.sty
+/usr/share/texmf/tex/latex/tools/variorefh.sty
+/usr/share/texmf/bibtex/bst/chicagoi.bst
+/usr/share/texmf/bibtex/bst/chicagoiheb.bst
+/usr/share/texmf/doc/latex/nikud/samples/long/Makefile
+/usr/share/texmf/doc/latex/nikud/samples/long/engrefs.bib
+/usr/share/texmf/doc/latex/nikud/samples/long/hebrefs.ubib
+/usr/share/texmf/doc/latex/nikud/samples/long/hebrew_test.utex
+/usr/share/texmf/doc/latex/nikud/samples/poem/poem.utex
+/usr/share/texmf/doc/latex/nikud/samples/poem/Makefile
+/usr/share/texmf/doc/latex/nikud/samples/short/Makefile
+/usr/share/texmf/doc/latex/nikud/samples/short/test.utex
+
+%post
+# rpm post install for nikud package
+# insert the line 'p +culmus.map' into the file config.ps
+
+CONFIG_PS_FILE=`kpsewhich --format="dvips config" config.ps`
+CONFIG_TMP=configpstmp.txt
+
+grep -v "culmus.map" $CONFIG_PS_FILE > $CONFIG_TMP
+echo "p +culmus.map" >> $CONFIG_TMP
+cp -f $CONFIG_TMP $CONFIG_PS_FILE
+rm -f $CONFIG_TMP
+mktexlsr
+
+%postun
+# rpm post uninstall for nikud package
+# remove the line 'p +culmus.map' from the file config.ps
+
+CONFIG_PS_FILE=`kpsewhich --format="dvips config" config.ps`
+CONFIG_TMP=configpstmp.tmp
+
+grep -v "culmus.map" $CONFIG_PS_FILE > $CONFIG_TMP
+cp -f $CONFIG_TMP $CONFIG_PS_FILE
+rm -f $CONFIG_TMP
+mktexlsr

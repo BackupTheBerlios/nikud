@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [ $# -ne 1 ]
+then
+  echo "Usage: `basename $0` <version number> (like 0.108.33)"
+  exit 1
+fi
+
 rm -fr tmp
 cd nikud
 make clean
@@ -23,3 +29,9 @@ popd
 mv ~/nikud_texmf-$1.tar.bz2 out
 rm -fr tmp
 rm -fr nikud-$1
+
+./create_rpm.sh $1
+
+echo ========================================================
+echo If everything went well, products are in ./out directory
+echo ========================================================
